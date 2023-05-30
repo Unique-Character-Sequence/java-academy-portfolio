@@ -1,4 +1,41 @@
 .mainDiv {
-    height: 100vh;
+    max-height: 100vh;
+    /*height: 100vh;*/
     background-color: #12312311;
+}
+
+.rectangle41 {
+    max-height: 100vh;
+    height: 91.33vh;
+    margin: 2.61vh 2.61vh 6.06vh;
+    background-color: #302D3D; /* Dark-Gray */
+    border-radius: 20px;
+}
+
+.logoTxt {
+    margin-top: 50px;
+    margin-left: 63px;
+    width: 187px;
+}
+
+.ellipse4 {
+    position: absolute;
+    left: 29.48%;
+    right: 52.86%;
+    top: -7.31%;
+    bottom: 87.46%;
+
+    background: rgba(255, 255, 255, 0.6);
+    filter: blur(50px);
+}
+
+.ellipse5 {
+    position: absolute;
+    left: 53.28%;
+    right: 25.52%;
+    top: 84.01%;
+    bottom: -3.87%;
+
+    background: rgba(255, 255, 255, 0.6);
+    filter: blur(50px);
 }

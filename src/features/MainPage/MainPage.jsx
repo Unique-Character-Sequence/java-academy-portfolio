@@ -1,23 +1,16 @@
 import React from 'react';
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import {Link} from "react-router-dom";
-import Button from "@mui/material/Button";
-import Box from "@mui/material/Box";
 import styles from "./MainPage.module.css"
+import Filler from "./Filler";
+import logo from "./assets/logo-txt(x2).png"
 
 const MainPage = props => (
     <div className={styles.mainDiv}>
-        <Box sx={{backgroundColor:"#12312312", textAlign : "center"}}>
-            <Typography variant="h2">Hello World</Typography>
-        </Box>
-        <Box sx={{marginTop: "2vh"}}>
-            <Link to="/counter">
-                <Button variant="outlined">
-                    <Typography variant="h6">counter</Typography>
-                </Button>
-            </Link>
-        </Box>
+        {/*<Filler/>*/}
+        <div className = {styles.rectangle41}>
+            <img className={styles.logoTxt} src={logo} alt=""/>
+        </div>
+        <div className={styles.ellipse4}/>
+        <div className={styles.ellipse5}/>
     </div>
 );
 
