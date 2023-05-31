@@ -1,13 +1,24 @@
 .mainDiv {
-    max-height: 100vh;
-    /*height: 100vh;*/
-    background-color: #12312311;
+    /*max-height: 100vh;*/
+    /*height: 200vh;*/
+    background-color: red;
+
+
 }
 
-.rectangle41 {
+.welcomeDiv {
     max-height: 100vh;
-    height: 91.33vh;
-    margin: 2.61vh 2.61vh 6.06vh;
+    height: 100vh;
+    background-color: cornflowerblue;
+    padding-top: 1px; /* Add a small padding to prevent margin collapsing */
+}
+
+.welcomeDiv .rectangle41 {
+    box-sizing: border-box;
+    height: 91.33%;
+    /*height: 91.33vh;*/
+    margin: 2.61vh 2.61vh;
+    /*padding-top: 2.61%;*/
     background-color: #302D3D; /* Dark-Gray */
     border-radius: 20px;
 }
@@ -15,8 +26,72 @@
 .logoTxt {
     margin-top: 50px;
     margin-left: 63px;
-    width: 187px;
+    width: 186px;
+    /*width: 10%;*/
 }
+
+.textBig1 {
+    position: absolute;
+    left: 19.79%;
+    right: 52.5%;
+    top: 30.09%;
+    bottom: 60.08%;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 110px;
+    line-height: 85.52%;
+    /* identical to box height, or 94px */
+    letter-spacing: -0.06em;
+    color: #DEDCE7;
+}
+
+.javaTextPosition {
+    position: absolute;
+    left: 20.78%;
+    right: 20.89%;
+    top: 42.8%; /*не оригинальное значение*/
+    bottom: 45.78%;
+    width: 1120px;
+    height: 94px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 110px;
+    color: #DEDCE7;
+    line-height: 85.52%;
+
+    /* identical to box height, or 94px */
+    letter-spacing: -0.06em;
+
+    transform: rotate(-2.19deg);
+}
+
+.textBigJavaBrackets {
+    font-weight: 400;
+}
+
+.textBigJava {
+    color: #FFFFFF;
+    position: relative; /* Add positioning to establish a new stacking context */
+    z-index: 1 /* Give the textBig a higher stacking order */
+}
+
+.rectangle16 {
+    position: absolute;
+    left: 20.53%; /*не оригинальное значение*/
+    right: 63.71%;
+    top: 42.57%; /*не оригинальное значение*/
+    bottom: 44.06%;
+
+    width: 310px;
+    background: #D0082C;
+    border-radius: 2px;
+    transform: rotate(-4.39deg);
+
+    z-index: 0;
+}
+
 
 .ellipse4 {
     position: absolute;
