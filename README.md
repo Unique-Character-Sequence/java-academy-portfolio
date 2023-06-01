@@ -30,9 +30,6 @@ Online Java Academy Project: This is an **actual commercial product** with a Fig
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-## Contributing
-
-
 
 ### Creating A Pull Request
 
@@ -45,9 +42,3 @@ To get a local copy up and running follow these simple example steps.
 ## Authors
 
 * **Pilici Rustam** - *Unemployed* - [Pilici Rustam](https://github.com/Unique-Character-Sequence) - *Making Java Academy Front-end part entirely*
-
-## Acknowledgements
-
-* []()
-* []()
-* []()
