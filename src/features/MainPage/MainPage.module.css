@@ -2,22 +2,21 @@
     /*max-height: 100vh;*/
     /*height: 200vh;*/
     background-color: red;
-
-
 }
 
 .welcomeDiv {
-    max-height: 100vh;
+    min-height: 874px;
     height: 100vh;
     background-color: cornflowerblue;
     padding-top: 1px; /* Add a small padding to prevent margin collapsing */
 }
 
-.welcomeDiv .rectangle41 {
+.rectangle41 {
     box-sizing: border-box;
-    height: 91.33%;
+    height: 874px;
+    /*width: 1235px;*/
     /*height: 91.33vh;*/
-    margin: 2.61vh 2.61vh;
+    margin: 25px 25px;
     /*padding-top: 2.61%;*/
     background-color: #302D3D; /* Dark-Gray */
     border-radius: 20px;
@@ -30,87 +29,92 @@
     /*width: 10%;*/
 }
 
-.textBig1 {
-    position: absolute;
-    left: 19.79%;
-    right: 52.5%;
-    top: 30.09%;
-    bottom: 60.08%;
+.rectangle41TextBox {
+    width: 1235px;
+    position: relative;
+    left: 355px;
+    top: 114px;
+
+    color: #DEDCE7;
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 110px;
-    line-height: 85.52%;
+    line-height: 94px;
     /* identical to box height, or 94px */
     letter-spacing: -0.06em;
-    color: #DEDCE7;
+}
+
+.textBig1 {
+    position: relative;
+    bottom: 14px;
+    z-index: 1
 }
 
 .javaTextPosition {
-    position: absolute;
-    left: 20.78%;
-    right: 20.89%;
-    top: 42.8%; /*не оригинальное значение*/
-    bottom: 45.78%;
-    width: 1120px;
-    height: 94px;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 110px;
-    color: #DEDCE7;
-    line-height: 85.52%;
-
-    /* identical to box height, or 94px */
-    letter-spacing: -0.06em;
-
+    position: relative;
+    top: 6px;
+    left: 19px;
     transform: rotate(-2.19deg);
+    font-weight: 700;
 }
 
 .textBigJavaBrackets {
+    position: relative;
     font-weight: 400;
+    color: #FFFFFF;
+    z-index: 1
 }
 
 .textBigJava {
     color: #FFFFFF;
-    position: relative; /* Add positioning to establish a new stacking context */
-    z-index: 1 /* Give the textBig a higher stacking order */
+    position: relative;
+    z-index: 1
+}
+
+.textBig2 {
+    position: relative;
+    top: 20px;
+    left: 393px;
+    width: 842px;
+}
+
+.textBig3 {
+    position: relative;
+    z-index: 1;
 }
 
 .rectangle16 {
     position: absolute;
-    left: 20.53%; /*не оригинальное значение*/
-    right: 63.71%;
-    top: 42.57%; /*не оригинальное значение*/
-    bottom: 44.06%;
-
+    top: -14px;
+    left: -9px;
+    height: 128px;
     width: 310px;
     background: #D0082C;
     border-radius: 2px;
-    transform: rotate(-4.39deg);
-
+    transform: rotate(-2.2deg);
     z-index: 0;
 }
 
 
 .ellipse4 {
     position: absolute;
-    left: 29.48%;
-    right: 52.86%;
-    top: -7.31%;
-    bottom: 87.46%;
-
-    background: rgba(255, 255, 255, 0.6);
+    height: 190px;
+    width: 339px;
+    top: -70px;
+    left: 566px;
+    background: rgba(255, 255, 255, 0.3);
     filter: blur(50px);
+    z-index: 2;
 }
 
 .ellipse5 {
     position: absolute;
-    left: 53.28%;
-    right: 25.52%;
-    top: 84.01%;
-    bottom: -3.87%;
-
-    background: rgba(255, 255, 255, 0.6);
+    height: 190px;
+    width: 407px;
+    left: 1023px;
+    top: 804px;
+    background: rgba(255, 255, 255, 0.3);
     filter: blur(50px);
+    z-index: 2;
 }
