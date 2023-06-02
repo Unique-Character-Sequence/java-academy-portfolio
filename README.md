@@ -6,13 +6,18 @@
 
   <h3 align="center">Java Academy (Portfolio Project)</h3>
 
-  <p align="center">
-    <a href="https://java-academy-portfolio.netlify.app"><strong>View Working Demo »</strong></a>
-    <br/>
-    <br/>
-  </p>
+<p align="center">
+  <a href="https://java-academy-portfolio.netlify.app">
+    <img src="https://img.shields.io/badge/-View Working Demo-2B9348?style=for-the-badge" alt="View Working Demo"/>
+  </a>
+  <br/>
+  <br/>
+  <a href="https://www.figma.com/file/R7FrGhIdnbYMhplqWRWTFm/Java-academy?type=design&node-id=0%3A1&t=HjcsRqT8mIheEd6F-1">
+    <img src="https://img.shields.io/badge/-View Figma Design-2B73B6?style=for-the-badge" alt="View Figma Design"/>
+  </a>
+  <br/>
+  <br/>
 </p>
-
 
 
 ## About The Project
