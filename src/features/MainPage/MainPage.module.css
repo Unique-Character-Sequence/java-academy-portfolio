@@ -1,13 +1,13 @@
 .mainDiv {
     /*max-height: 100vh;*/
     /*height: 200vh;*/
-    background-color: red;
+    /*background-color: red;*/
 }
 
 .welcomeDiv {
     min-height: 874px;
     height: 100vh;
-    background-color: cornflowerblue;
+    /*background-color: cornflowerblue;*/
     padding-top: 1px; /* Add a small padding to prevent margin collapsing */
 }
 
@@ -84,6 +84,24 @@
     z-index: 1;
 }
 
+.textSmall1 {
+    position: absolute;
+    height: 56px;
+    width: 438px;
+    left: 780px;
+    top: 634px;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 24px;
+    /*letter-spacing: 0;*/
+    text-align: left;
+
+    color: #FFFFFF;
+}
+
 .rectangle16 {
     position: absolute;
     top: -14px;
@@ -96,6 +114,17 @@
     z-index: 0;
 }
 
+.group4 {
+    position: absolute;
+    top: 662px;
+    left: 351px;
+}
+
+.group5 {
+    position: absolute;
+    top: 238px;
+    left: 927px;
+}
 
 .ellipse4 {
     position: absolute;
@@ -117,4 +146,32 @@
     background: rgba(255, 255, 255, 0.3);
     filter: blur(50px);
     z-index: 2;
+}
+
+.buttonStartLearning {
+    position: absolute;
+    height: 56px;
+    width: 251px;
+    left: 780px;
+    top: 732px;
+    border-radius: 10px;
+    border: none;
+
+    /* Red */
+    background: #D0082C;
+
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.buttonStartLearning:hover {
+    background: #DA3739;
 }
