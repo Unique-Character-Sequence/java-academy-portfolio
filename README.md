@@ -28,7 +28,15 @@ Online Java Academy Project: This is an **actual commercial product** with a Fig
 
 ## Built With
 
-- React, Redux Toolkit, Material UI as main libraries
+- ![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+- ![Redux Toolkit](https://img.shields.io/badge/-Redux_Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white)
+- ![Material UI](https://img.shields.io/badge/-Material_UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
+- ![SASS](https://img.shields.io/badge/-SASS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+
+The project is built using popular technologies and frameworks, including React, Redux Toolkit, Material UI, and SASS. These technologies enable efficient development, powerful state management, beautiful UI components, and flexible styling options.
+
+Feel free to explore the project and see how these technologies come together to create a seamless and visually appealing user experience.
+
 
 ## Getting Started
 
