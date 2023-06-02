@@ -15,46 +15,46 @@ const MainPage = () => {
     };
 
     return (
-        <div className={styles.mainDiv}>
+        <div className="mainDiv">
             {/*<Filler/>*/}
-            <div className={styles.welcomeDiv}>
-                <div className={styles.rectangle41}>
-                    <img className={styles.logoTxt} src={logo} alt=""/>
+            <div className="welcomeDiv">
+                <div className="rectangle41">
+                    <img className="logoTxt" src={logo} alt=""/>
                     <Fade in={clicked}>
-                        <div className={styles.rectangle41TextBox}>
-                            <span className={styles.textBig1}>Становись</span>
-                            <div className={styles.javaTextPosition}>
-                                <div className={styles.rectangle16}/>
-                                <span className={styles.textBigJavaBrackets}>{"{"}</span>
-                                <span className={styles.textBigJava}>Java</span>
-                                <span className={styles.textBigJavaBrackets}>{"}"}</span>
-                                <span className={styles.textBig3}>-разработчиком</span>
+                        <div className="rectangle41TextBox">
+                            <span className="textBig1">Становись</span>
+                            <div className="javaTextPosition">
+                                <div className="rectangle16"/>
+                                <span className="textBigJavaBrackets">{"{"}</span>
+                                <span className="textBigJava">Java</span>
+                                <span className="textBigJavaBrackets">{"}"}</span>
+                                <span className="textBig3">-разработчиком</span>
                             </div>
-                            <span className={styles.textBig2}>вместе с нами</span>
+                            <span className="textBig2">вместе с нами</span>
                         </div>
                     </Fade>
-                    <span className={styles.textSmall1}>
+                    <span className="textSmall1">
                         Получи классную востребованную профессию и зарабатывай  дома
                         <br/>
                         в удобное время
                     </span>
-                    <button onClick={handleClick} className={styles.buttonStartLearning}>Начать учиться</button>
-                    <img className={styles.group4} src={group4} alt=""/>
-                    <img className={styles.group5} src={group5} alt=""/>
-                    <div className={styles.ellipse5}/>
-                    <div className={styles.ellipse4}/>
-                    <div className={styles.group6_ButtonsContainer}>
-                        <button className={styles.group6_Button}>
-                            <span className={styles.group6_ButtonContent}>Об обучении</span>
+                    <button onClick={handleClick} className="buttonStartLearning">Начать учиться</button>
+                    <img className="group4" src={group4} alt=""/>
+                    <img className="group5" src={group5} alt=""/>
+                    <div className="ellipse5"/>
+                    <div className="ellipse4"/>
+                    <div className="group6_ButtonsContainer">
+                        <button className="group6_Button1">
+                            <span className="group6_ButtonContent">Об обучении</span>
                         </button>
-                        <button className={styles.group6_Button}>
-                            <span className={styles.group6_ButtonContent}>Преимущества</span>
+                        <button className="group6_Button2">
+                            <span className="group6_ButtonContent">Преимущества</span>
                         </button>
-                        <button className={styles.group6_Button}>
-                            <span className={styles.group6_ButtonContent}>Отзывы</span>
+                        <button className="group6_Button3">
+                            <span className="group6_ButtonContent">Отзывы</span>
                         </button>
-                        <button className={styles.group6_Button}>
-                            <span className={styles.group6_ButtonContent}>Ценовая политика</span>
+                        <button className="group6_Button4">
+                            <span className="group6_ButtonContent">Ценовая политика</span>
                         </button>
                     </div>
                 </div>
