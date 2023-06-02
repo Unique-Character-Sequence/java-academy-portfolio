@@ -26,7 +26,6 @@
     margin-top: 50px;
     margin-left: 63px;
     width: 186px;
-    /*width: 10%;*/
 }
 
 .rectangle41TextBox {
@@ -96,7 +95,6 @@
     font-size: 20px;
     font-weight: 300;
     line-height: 24px;
-    /*letter-spacing: 0;*/
     text-align: left;
 
     color: #FFFFFF;
@@ -174,4 +172,40 @@
 
 .buttonStartLearning:hover {
     background: #DA3739;
+}
+
+.group6_ButtonsContainer {
+    background: indianred;
+    position: absolute;
+    height: 60px;
+    width: 1057px;
+    left: 431px;
+    top: 869px;
+    border-radius: 30px;
+}
+
+.group6_Button {
+    width: 260px;
+    height: 60px;
+    border-radius: 30px;
+    padding: 10px 30px;
+    gap: 10px;
+    border: 2px solid #302D3D;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    margin-right: 25px;
+}
+
+.group6_Button2 {
+    width: 283px;
+}
+
+.group6_ButtonContent {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #302D3D;
 }

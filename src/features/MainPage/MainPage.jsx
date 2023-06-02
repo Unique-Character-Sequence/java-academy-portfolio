@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./MainPage.module.css"
+import "./MainPage.sass"
 import Filler from "./Filler";
 import logo from "./assets/logo-txt(x2).png"
 import group4 from "./assets/Group 4.png"
@@ -42,6 +43,20 @@ const MainPage = () => {
                     <img className={styles.group5} src={group5} alt=""/>
                     <div className={styles.ellipse5}/>
                     <div className={styles.ellipse4}/>
+                    <div className={styles.group6_ButtonsContainer}>
+                        <button className={styles.group6_Button}>
+                            <span className={styles.group6_ButtonContent}>Об обучении</span>
+                        </button>
+                        <button className={styles.group6_Button}>
+                            <span className={styles.group6_ButtonContent}>Преимущества</span>
+                        </button>
+                        <button className={styles.group6_Button}>
+                            <span className={styles.group6_ButtonContent}>Отзывы</span>
+                        </button>
+                        <button className={styles.group6_Button}>
+                            <span className={styles.group6_ButtonContent}>Ценовая политика</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
