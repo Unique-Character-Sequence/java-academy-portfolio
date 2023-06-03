@@ -54,20 +54,22 @@ const MainPage = () => {
                                 в удобное время
                                 </span>
                             </div>
+                            <button onClick={handleClick} className="buttonStartLearning">Начать учиться</button>
+                            <div className="auth_ButtonsContainer">
+                                <button className="auth_Button1">
+                                    <span>Вход</span>
+                                </button>
+                                <button className="auth_Button2">
+                                    <span>Регистрация</span>
+                                </button>
+                            </div>
                         </div>
                     </Fade>
-                    <button onClick={handleClick} className="buttonStartLearning">Начать учиться</button>
 
 
                     <div className="ellipse5"/>
                     <div className="ellipse4"/>
                     <div>
-                        <button className="auth_Button1">
-                            <span>Вход</span>
-                        </button>
-                        <button className="auth_Button2">
-                            <span>Регистрация</span>
-                        </button>
                     </div>
                 </div>
             </div>

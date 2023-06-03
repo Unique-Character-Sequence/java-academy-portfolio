@@ -24,9 +24,18 @@ $mainGray: #302D3D
   border-radius: 20px
 
 .logoTxt
-  margin-top: 50px
-  margin-left: 63px
+  position: relative
+  top: 50px
+  left: 63px
   width: 186px
+
+.rectangle41TextBox
+  width: 1235px
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  padding-left: 73px
+  top: 161px
 
 @mixin rectangle41Text
   color: #DEDCE7
@@ -35,15 +44,6 @@ $mainGray: #302D3D
   line-height: 94px
   /* identical to box height, or 94px
   letter-spacing: -0.06em
-
-
-.rectangle41TextBox
-  width: 1235px
-  position: relative
-  margin-left: auto
-  margin-right: auto
-  padding-left: 73px
-  top: 111px
 
 .textBig1
   @include rectangle41Text
@@ -142,11 +142,12 @@ $mainGray: #302D3D
   @include ellipse(407px, 804px, 1023px)
 
 .buttonStartLearning
-  position: absolute
+  position: relative
   height: 56px
   width: 251px
-  left: 780px
-  top: 732px
+
+  left: 400px
+  bottom: 187px
   border-radius: 10px
   border: none
   background: $mainRed
@@ -169,7 +170,7 @@ $mainGray: #302D3D
   margin-left: auto
   margin-right: auto
   right: 39px
-  top: 85px
+  top: 88px
   border-radius: 30px
   z-index: 3
 
@@ -211,8 +212,7 @@ $mainGray: #302D3D
   line-height: 24px
 
 @mixin auth_Button($left)
-  position: absolute
-  top: 97px
+  display: flex
   left: $left
   height: 44px
   border-radius: 25px
@@ -232,11 +232,20 @@ $mainGray: #302D3D
     background-color: #4B6FCB
     color: #FFFFFF
 
+.auth_ButtonsContainer
+  display: flex
+  position: relative
+  bottom: 873px
+  right: 75px
+  margin-left: auto
+  margin-right: auto
 
 .auth_Button1
+  margin-left: auto
   //width: 108px
-  @include auth_Button(1533px)
+  @include auth_Button(0px)
 
 .auth_Button2
   //width: 187px
-  @include auth_Button(1651px)
+  margin-left: 10px
+  @include auth_Button(0px)
