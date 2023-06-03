@@ -17,18 +17,10 @@ $mainGray: #302D3D
 .rectangle41
   box-sizing: border-box
   height: 874px
-
   //width: 1870px // оригинал
   width: calc(100vw - 50px)
-
-
-  /*height: 91.33vh
   margin: 25px 25px
-
-  /*padding-top: 2.61%
   background-color: $mainGray
-
-  /* Dark-Gray
   border-radius: 20px
 
 .logoTxt
@@ -36,29 +28,32 @@ $mainGray: #302D3D
   margin-left: 63px
   width: 186px
 
+@mixin rectangle41Text
+  color: #DEDCE7
+  font-family: $mainFontFamily
+  font-size: 110px
+  line-height: 94px
+  /* identical to box height, or 94px
+  letter-spacing: -0.06em
+
+
 .rectangle41TextBox
   width: 1235px
   position: relative
   margin-left: auto
   margin-right: auto
   padding-left: 73px
-  top: 114px
-
-  color: #DEDCE7
-  font-family: $mainFontFamily
-  font-weight: 500
-  font-size: 110px
-  line-height: 94px
-
-  /* identical to box height, or 94px
-  letter-spacing: -0.06em
+  top: 111px
 
 .textBig1
+  @include rectangle41Text
+  font-weight: 500
   position: relative
   bottom: 14px
   z-index: 1
 
 .javaTextPosition
+  @include rectangle41Text
   position: relative
   top: 6px
   left: 19px
@@ -66,35 +61,42 @@ $mainGray: #302D3D
   font-weight: 700
 
 .textBigJavaBrackets
+  @include rectangle41Text
   position: relative
   font-weight: 400
   color: #FFFFFF
   z-index: 1
 
 .textBigJava
+  @include rectangle41Text
   color: #FFFFFF
   position: relative
   z-index: 1
 
 .textBig2
+  @include rectangle41Text
+  font-weight: 500
   position: relative
   top: 20px
   left: 393px
   width: 842px
 
 .textBig3
+  @include rectangle41Text
   position: relative
   z-index: 1
 
-.textSmall1
-  position: absolute
-  height: 56px
+.textSmall1_Container
+  position: relative
+  left: 400px
+  bottom: 210px
   width: 438px
-  left: 780px
-  top: 634px
+
+.textSmall1
+  height: 56px
   font-family: $mainFontFamily
   font-size: 20px
-  font-weight: 300
+  font-weight: 400
   line-height: 24px
   text-align: left
   color: #FFFFFF
@@ -167,7 +169,7 @@ $mainGray: #302D3D
   margin-left: auto
   margin-right: auto
   right: 39px
-  top: 35px
+  top: 85px
   border-radius: 30px
   z-index: 3
 

@@ -47,13 +47,15 @@ const MainPage = () => {
                                     <span className="group6_ButtonContent">Ценовая политика</span>
                                 </button>
                             </div>
+                            <div className="textSmall1_Container">
+                                <span className="textSmall1">
+                                Получи классную востребованную профессию и зарабатывай  дома
+                                <br/>
+                                в удобное время
+                                </span>
+                            </div>
                         </div>
                     </Fade>
-                    <span className="textSmall1">
-                        Получи классную востребованную профессию и зарабатывай  дома
-                        <br/>
-                        в удобное время
-                    </span>
                     <button onClick={handleClick} className="buttonStartLearning">Начать учиться</button>
 
 
