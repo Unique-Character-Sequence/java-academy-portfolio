@@ -18,7 +18,10 @@ $mainGray: #302D3D
   box-sizing: border-box
   height: 874px
 
-  width: 1870px
+  //width: 1870px // оригинал
+  width: calc(100vw - 50px)
+
+
   /*height: 91.33vh
   margin: 25px 25px
 
@@ -36,8 +39,11 @@ $mainGray: #302D3D
 .rectangle41TextBox
   width: 1235px
   position: relative
-  left: 355px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 73px
   top: 114px
+
   color: #DEDCE7
   font-family: $mainFontFamily
   font-weight: 500
@@ -104,15 +110,18 @@ $mainGray: #302D3D
   transform: rotate(-2.2deg)
   z-index: 0
 
+@mixin groupImage ($top)
+  position: relative
+  display: block
+  top: $top
+
 .group4
-  position: absolute
-  top: 662px
-  left: 351px
+  @include groupImage(75px)
+  right: 30px
 
 .group5
-  position: absolute
-  top: 238px
-  left: 927px
+  @include groupImage(-475px)
+  left: 547px
 
 @mixin ellipse($width, $top, $left)
   position: absolute

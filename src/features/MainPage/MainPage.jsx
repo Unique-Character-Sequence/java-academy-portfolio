@@ -31,6 +31,8 @@ const MainPage = () => {
                                 <span className="textBig3">-разработчиком</span>
                             </div>
                             <span className="textBig2">вместе с нами</span>
+                            <img className="group4" src={group4} alt=""/>
+                            <img className="group5" src={group5} alt=""/>
                         </div>
                     </Fade>
                     <span className="textSmall1">
@@ -39,8 +41,8 @@ const MainPage = () => {
                         в удобное время
                     </span>
                     <button onClick={handleClick} className="buttonStartLearning">Начать учиться</button>
-                    <img className="group4" src={group4} alt=""/>
-                    <img className="group5" src={group5} alt=""/>
+
+
                     <div className="ellipse5"/>
                     <div className="ellipse4"/>
                     <div className="group6_ButtonsContainer">
