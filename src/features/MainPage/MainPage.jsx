@@ -33,6 +33,20 @@ const MainPage = () => {
                             <span className="textBig2">вместе с нами</span>
                             <img className="group4" src={group4} alt=""/>
                             <img className="group5" src={group5} alt=""/>
+                            <div className="group6_ButtonsContainer">
+                                <button className="group6_Button1">
+                                    <span className="group6_ButtonContent">Об обучении</span>
+                                </button>
+                                <button className="group6_Button2">
+                                    <span className="group6_ButtonContent">Преимущества</span>
+                                </button>
+                                <button className="group6_Button3">
+                                    <span className="group6_ButtonContent">Отзывы</span>
+                                </button>
+                                <button className="group6_Button4">
+                                    <span className="group6_ButtonContent">Ценовая политика</span>
+                                </button>
+                            </div>
                         </div>
                     </Fade>
                     <span className="textSmall1">
@@ -45,20 +59,6 @@ const MainPage = () => {
 
                     <div className="ellipse5"/>
                     <div className="ellipse4"/>
-                    <div className="group6_ButtonsContainer">
-                        <button className="group6_Button1">
-                            <span className="group6_ButtonContent">Об обучении</span>
-                        </button>
-                        <button className="group6_Button2">
-                            <span className="group6_ButtonContent">Преимущества</span>
-                        </button>
-                        <button className="group6_Button3">
-                            <span className="group6_ButtonContent">Отзывы</span>
-                        </button>
-                        <button className="group6_Button4">
-                            <span className="group6_ButtonContent">Ценовая политика</span>
-                        </button>
-                    </div>
                     <div>
                         <button className="auth_Button1">
                             <span>Вход</span>
