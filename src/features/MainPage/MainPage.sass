@@ -1,16 +1,17 @@
 $mainRed: #D0082C
 $mainFontFamily: 'Inter', sans-serif
+$mainGray: #302D3D
 
 .mainDiv
-/*max-height: 100vh;
-/*height: 200vh;
-/*background-color: red;
+/*max-height: 100vh
+/*height: 200vh
+/*background-color: red
 
 .welcomeDiv
   min-height: 874px
   height: 100vh
 
-  /*background-color: cornflowerblue;
+  /*background-color: cornflowerblue
   padding-top: 1px //Add a small padding to prevent margin collapsing
 
 .rectangle41
@@ -18,11 +19,11 @@ $mainFontFamily: 'Inter', sans-serif
   height: 874px
 
   width: 1870px
-  /*height: 91.33vh;
+  /*height: 91.33vh
   margin: 25px 25px
 
-  /*padding-top: 2.61%;
-  background-color: #302D3D
+  /*padding-top: 2.61%
+  background-color: $mainGray
 
   /* Dark-Gray
   border-radius: 20px
@@ -165,13 +166,13 @@ $mainFontFamily: 'Inter', sans-serif
   border-radius: 30px
   padding: 10px 30px
   gap: 10px
-  border: 2px solid #302D3D
+  border: 2px solid $mainGray
   box-sizing: border-box
   background: #FFFFFF
   margin-right: $marginRight
   cursor: pointer
   transition: 0.2s
-  color: #302D3D
+  color: $mainGray
 
   &:hover
     border: 2px solid $mainRed
@@ -195,3 +196,34 @@ $mainFontFamily: 'Inter', sans-serif
   font-weight: 700
   font-size: 20px
   line-height: 24px
+
+@mixin auth_Button($left)
+  position: absolute
+  top: 97px
+  left: $left
+  height: 44px
+  border-radius: 25px
+  padding: 10px 30px 10px 30px
+  gap: 10px
+  border: none
+  background-color: #FFFFFF
+  color: $mainGray
+  font-family: $mainFontFamily
+  font-size: 20px
+  font-weight: 400
+  line-height: 24px
+  transition: 0.2s
+  cursor: pointer
+
+  &:hover
+    background-color: #4B6FCB
+    color: #FFFFFF
+
+
+.auth_Button1
+  //width: 108px
+  @include auth_Button(1533px)
+
+.auth_Button2
+  //width: 187px
+  @include auth_Button(1651px)

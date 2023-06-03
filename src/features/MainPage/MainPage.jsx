@@ -57,6 +57,14 @@ const MainPage = () => {
                             <span className="group6_ButtonContent">Ценовая политика</span>
                         </button>
                     </div>
+                    <div>
+                        <button className="auth_Button1">
+                            <span>Вход</span>
+                        </button>
+                        <button className="auth_Button2">
+                            <span>Регистрация</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
