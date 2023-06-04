@@ -44,6 +44,7 @@ $mainGray: #302D3D
   line-height: 94px
   /* identical to box height, or 94px
   letter-spacing: -0.06em
+  transition: 0.2s
 
 .textBig1
   @include rectangle41Text
@@ -255,6 +256,6 @@ $mainGray: #302D3D
 $bp-table: 768px
 
 @media (max-width: $bp-table)
-  .rectangle41TextBox
-    display: none
-    transition: 0.2s
+
+  .textBig1
+    font-size: 60px
