@@ -1,0 +1,64 @@
+@import variables
+
+@mixin rectangle41Text
+  color: #DEDCE7
+  font-family: $mainFontFamily
+  font-size: 110px
+  line-height: 94px
+  /* identical to box height, or 94px
+  letter-spacing: -0.06em
+  transition: 0.2s
+
+@mixin groupImage($top)
+  position: relative
+  display: block
+  top: $top
+
+@mixin ellipse($width, $top, $left)
+  position: absolute
+  height: 190px
+  width: $width
+  top: $top
+  left: $left
+  background: rgba(255, 255, 255, 0.3)
+  filter: blur(50px)
+  z-index: 2
+
+@mixin group6_Button($width, $marginRight)
+  width: $width
+  height: 60px
+  border-radius: 30px
+  padding: 10px 30px
+  gap: 10px
+  border: 2px solid $mainGray
+  box-sizing: border-box
+  background: #FFFFFF
+  margin-right: $marginRight
+  cursor: pointer
+  transition: 0.2s
+  color: $mainGray
+
+  &:hover
+    border: 2px solid $mainRed
+    color: $mainRed
+
+@mixin auth_Button($left)
+  display: flex
+  left: $left
+  height: 44px
+  border-radius: 25px
+  padding: 10px 30px 10px 30px
+  gap: 10px
+  border: none
+  background-color: #FFFFFF
+  color: $mainGray
+  font-family: $mainFontFamily
+  font-size: 20px
+  font-weight: 400
+  line-height: 24px
+  transition: 0.2s
+  cursor: pointer
+
+  &:hover
+    background-color: #4B6FCB
+    color: #FFFFFF

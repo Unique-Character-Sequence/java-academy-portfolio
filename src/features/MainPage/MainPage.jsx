@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from "./MainPage.module.css"
-import "./MainPage.sass"
+import "./styles/MainPage.sass"
 import Filler from "./Filler";
 import logo from "./assets/logo-txt(x2).png"
 import group4 from "./assets/Group 4.png"
