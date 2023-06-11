@@ -15,48 +15,73 @@
 
 .logoTxt
   position: absolute
-  top: 5.357vw
-  left: 9.5vw
-  width: 13.334vw
-  height: 8vw
+  @include media(">1400px")
+    top: 75px
+    left: 88px
+    width: 187px
+    height: 112px
+    transition: 0.2s
+  @include media(">=tablet", "<=1400px")
+    top: 5.357vw
+    left: 9.5vw
+    width: 13.334vw
+    height: 8vw
 
 .rectangle41
   position: absolute
   box-sizing: border-box
-  height: 62.429vw
   //width: 1870px // оригинал
-  width: 96.4286vw
-  top: 1.7857vw
-  left: 1.7857vw
   background-color: $mainBlue
-  border-radius: 1.4286vw
+  @include media(">1400px")
+    height: 874px
+    width: calc(100vw - 50px)
+    top: 25px
+    left: 25px
+    border-radius: 20px
+  @include media(">=tablet", "<=1400px")
+    height: 62.429vw
+    width: 96.4286vw
+    top: 1.7857vw
+    left: 1.7857vw
+    border-radius: 1.4286vw
 
-//.rectangle41TextBox
-//  width: 1235px
-//  position: absolute
-//  margin-left: auto
-//  margin-right: auto
-//  padding-left: 73px
-//  top: 161px
+.rectangle41TextBox
+  @include media(">1400px")
+    width: 1235px
+    position: relative
+    margin-left: auto
+    margin-right: auto
+    padding-left: 148px
 
 .textBig1
   @include rectangle41Text
   position: absolute
-  top: 20.571vw
-  left: 8.571vw
-  width: 38vw
   font-weight: 500
   z-index: 1
+  @include media(">1400px")
+    top: 288px
+    left: 120px
+    width: 532px
+  @include media(">=tablet", "<=1400px")
+    top: 20.571vw
+    left: 8.571vw
+    width: 38vw
 
 .javaTextPosition
   @include rectangle41Text
   position: absolute
   z-index: 1
-  top: 28.857vw
-  left: 9.929vw
-  width: 80vw
   transform: rotate(-2.19deg)
   font-weight: 700
+  @include media(">1400px")
+    top: 404px
+    left: 139px
+    width: 1120px
+  @include media(">=tablet", "<=1400px")
+    top: 28.857vw
+    left: 9.929vw
+    width: 80vw
+
 
 .textBigJava
   @include rectangle41Text
@@ -76,9 +101,14 @@
   @include rectangle41Text
   font-weight: 500
   position: absolute
-  top: 36.286vw
-  left: 36.643vw
-  width: 60.286vw
+  @include media(">1400px")
+    top: 508px
+    left: 513px
+    width: 844px
+  @include media(">=tablet", "<=1400px")
+    top: 36.286vw
+    left: 36.643vw
+    width: 60.286vw
 
 .textBig3
   @include rectangle41Text
@@ -91,11 +121,18 @@
   text-align: left
   color: #FFFFFF
   position: absolute
-  top: 45vw
-  left: 37.143vw
-  width: 31.286vw
-  line-height: 1.714vw
-  font-size: 1.4286vw
+  @include media(">1400px")
+    top: 630px
+    left: 520px
+    width: 438px
+    line-height: 24px
+    font-size: 20px
+  @include media(">=tablet", "<=1400px")
+    top: 45vw
+    left: 37.143vw
+    width: 31.286vw
+    line-height: 1.714vw
+    font-size: 1.4286vw
 
 .rectangle16__above1400
   //TODO: временное решение. По идее можно заменить обычным rectangle16
@@ -109,90 +146,143 @@
 
 .rectangle16
   @include rectangle16
-  top: 28.857vw
-  left: 9.286vw
-  height: 9.143vw
-  width: 22.143vw
   z-index: 0
+  @include media(">=tablet", "<=1400px")
+    top: 28.857vw
+    left: 9.286vw
+    height: 9.143vw
+    width: 22.143vw
   @include media(">1400px")
     display: none
 
 .group4
   position: absolute
   display: block
-  top: 47.0vw
-  left: 6.5vw
-  width: 25.357vw
-  height: 8.929vw
+  @include media(">1400px")
+    top: 658px
+    left: 91px
+    width: 355px
+    height: 125px
+  @include media(">=tablet", "<=1400px")
+    top: 47.0vw
+    left: 6.5vw
+    width: 25.357vw
+    height: 8.929vw
 
 .group5
   position: absolute
   display: block
-  top: 16.714vw
-  left: 47.643vw
-  width: 42.5vw
-  height: 5.214vw
+  @include media(">1400px")
+    top: 234px
+    left: 667px
+    width: 595px
+    height: 73px
+  @include media(">=tablet", "<=1400px")
+    top: 16.714vw
+    left: 47.643vw
+    width: 42.5vw
+    height: 5.214vw
 
 
 .ellipse4
-  @include ellipse(24.2143vw, -6.0714vw, 20.5vw)
+  @include media(">1400px")
+    @include ellipse(339px, -85px, 287px)
+  @include media(">=tablet", "<=1400px")
+    @include ellipse(24.2143vw, -6.0714vw, 20.5vw)
 
 .ellipse5
-  @include ellipse(29.0714vw, 57.4286vw, 54.5vw)
+  @include media(">1400px")
+    @include ellipse(407px, 804px, 763px)
+  @include media(">=tablet", "<=1400px")
+    @include ellipse(29.0714vw, 57.4286vw, 54.5vw)
 
 .buttonStartLearning
   position: absolute
-  height: 4.0000vw
-  width: 17.9286vw
-  left: 37.1429vw
-  top: 51.9286vw
-  border-radius: 0.7143vw
   border: none
   background: $mainRed
   font-family: $mainFontFamily
   font-weight: 600
-  font-size: 1.4286vw
-  line-height: 1.7143vw
   color: #FFFFFF
   cursor: pointer
-
+  @include media(">1400px")
+    height: 56px
+    width: 251px
+    left: 520px
+    top: 727px
+    border-radius: 10px
+    font-size: 20px
+    line-height: 24px
+  @include media(">=tablet", "<=1400px")
+    height: 4.0000vw
+    width: 17.9286vw
+    left: 37.1429vw
+    top: 51.9286vw
+    border-radius: 0.7143vw
+    font-size: 1.4286vw
+    line-height: 1.7143vw
   &:hover
     transition: 0.2s
     background: #DA3739
 
 .group6_ButtonsContainer
   position: absolute
-  top: 62.0714vw
-  left: 12.2143vw
-  height: 4.2857vw
   margin-left: auto
   margin-right: auto
-  border-radius: 2.1429vw
   z-index: 3
+  @include media(">1400px")
+    top: 869px
+    left: 171px
+    height: 60px
+    border-radius: 30px
+  @include media(">=tablet", "<=1400px")
+    top: 62.0714vw
+    left: 12.2143vw
+    height: 4.2857vw
+    border-radius: 2.1429vw
 
 .group6_Button1
-  @include group6_Button(18.57vw, 1.7857vw)
+  @include media(">1400px")
+    @include group6_Button(260px, 25px)
+  @include media(">=tablet", "<=1400px")
+    @include group6_Button(18.57vw, 1.7857vw)
 
 .group6_Button2
-  @include group6_Button(20.21vw, 1.7857vw)
+  @include media(">1400px")
+    @include group6_Button(283px, 25px)
+  @include media(">=tablet", "<=1400px")
+    @include group6_Button(20.21vw, 1.7857vw)
 
 .group6_Button3
-  @include group6_Button(12.785vw, 1.7857vw)
+  @include media(">1400px")
+    @include group6_Button(179px, 25px)
+  @include media(">=tablet", "<=1400px")
+    @include group6_Button(12.785vw, 1.7857vw)
 
 .group6_Button4
-  @include group6_Button(18.57vw, 0px)
+  @include media(">1400px")
+    @include group6_Button(260px, 0px)
+  @include media(">=tablet", "<=1400px")
+    @include group6_Button(18.57vw, 0px)
 
 .group6_ButtonContent
   font-family: $mainFontFamily
   font-weight: 700
-  font-size: 1.4285vw
-  line-height: 1.7143vw
+  @include media(">1400px")
+    font-size: 20px
+    line-height: 24px
+  @include media(">=tablet", "<=1400px")
+    font-size: 1.4285vw
+    line-height: 1.7143vw
 
 .auth_ButtonsContainer
+  @include media(">1400px")
+    top: 97px
+    left: 975px
+  @include media(">=tablet", "<=1400px")
+    top: 6.9286vw
+    left: 69.6429vw
   display: flex
   position: absolute
-  top: 6.9286vw
-  left: 69.6429vw
   margin-left: auto
   margin-right: auto
 
@@ -201,6 +291,7 @@
   @include auth_Button
 
 .auth_Button2
+
   margin-left: 0.7143vw
   @include auth_Button
 

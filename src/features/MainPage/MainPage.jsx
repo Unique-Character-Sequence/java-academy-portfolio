@@ -62,10 +62,10 @@ const MainPage = () => {
                                 <span>Регистрация</span>
                             </button>
                         </div>
+                        <div className="ellipse5"/>
+                        <div className="ellipse4"/>
                     </div>
                 </Fade>
-                <div className="ellipse5"/>
-                <div className="ellipse4"/>
                 <div>
                 </div>
             </div>

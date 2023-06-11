@@ -6,20 +6,25 @@
   color: #DEDCE7
   font-family: $mainFontFamily
   letter-spacing: -0.06em
-  @include media(">=tablet", "<=1400px") // TODO: Временное решение?
-    height: 6.714vw
-    line-height: 6.719vw
-    font-size: 7.857vw
   @include media(">1400px")
     height: 94px
     line-height: 94px
     font-size: 110px
+  @include media(">=tablet", "<=1400px")
+    height: 6.714vw
+    line-height: 6.719vw
+    font-size: 7.857vw
 
 @mixin rectangle16
   position: absolute
   background: $mainRed
-  border-radius: 0.1429vw
-  transform: rotate(-4.39deg)
+  @include media(">1400px")
+    //повёрнутый элемент внутри другого повёрнутого элемента
+    transform: rotate(-2.2deg)
+    border-radius: 2px
+  @include media(">=tablet", "<=1400px")
+    transform: rotate(-4.39deg)
+    border-radius: 0.1429vw
 
 //@mixin groupImage($top, $left, $width, $height)
 //  position: absolute
@@ -31,47 +36,67 @@
 
 @mixin ellipse($width, $top, $left)
   position: absolute
-  height: 13.5714vw
   width: $width
   top: $top
   left: $left
   background: rgba(255, 255, 255, 0.3)
-  filter: blur(3.5714vw)
-  //filter: blur(convertToVw_1400(50))
   z-index: 2
+  @include media(">1400px")
+    height: 190px
+    filter: blur(50px)
+  @include media(">=tablet", "<=1400px")
+    height: 13.5714vw
+    filter: blur(3.5714vw)
 
 @mixin group6_Button($width, $marginRight)
   width: $width
-  height: 4.285vw
-  border-radius: 2.1429vw
-  padding: 0.714vw 2.142vw
-  gap: 0.714vw
-  border: 2px solid $mainBlue // с двумя пикселями vw странно работает *
+  // с двумя пикселями vw странно работает *
+  border: 2px solid $mainBlue
   box-sizing: border-box
   background: #FFFFFF
   margin-right: $marginRight
   cursor: pointer
   color: $mainBlue
+  @include media(">1400px")
+    height: 60px
+    border-radius: 30px
+    padding: 10px 30px
+    gap: 10px
+  @include media(">=tablet", "<=1400px")
+    height: 4.285vw
+    border-radius: 2.1429vw
+    padding: 0.714vw 2.142vw
+    gap: 0.714vw
 
   &:hover
     transition: 0.2s
-    border: 2px solid $mainRed // *см. выше
+    border: 2px solid $mainRed
+    // *см. выше
     color: $mainRed
 
 @mixin auth_Button
   display: flex
-  height: 3.1429vw
-  border-radius: 1.7857vw
-  padding: 0.7143vw 2.1429vw 0.7143vw 2.1429vw
-  gap: 0.7143vw
   border: none
   background-color: #FFFFFF
   color: $mainBlue
   font-family: $mainFontFamily
-  font-size: 1.4286vw
   font-weight: 400
-  line-height: 1.7143vw
   cursor: pointer
+  @include media(">1400px")
+    height: 44px
+    border-radius: 25px
+    padding: 10px 30px 10px 30px
+    gap: 10px
+    font-size: 20px
+    line-height: 24px
+  @include media(">=tablet", "<=1400px")
+    height: 3.1429vw
+    border-radius: 1.7857vw
+    padding: 0.7143vw 2.1429vw 0.7143vw 2.1429vw
+    gap: 0.7143vw
+    font-size: 1.4286vw
+    line-height: 1.7143vw
+
   &:hover
     transition: 0.2s
     background-color: #4B6FCB
