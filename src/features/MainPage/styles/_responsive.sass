@@ -1,5 +1,37 @@
-$bp-table: 768px
+@import include-media
 
-@media (min-width: $bp-table)
+@function convertToVw($pixelSize)
+  @return #{$pixelSize / 1400 * 100}vw
+
+@include media(">tablet", "<=1400px")
+  .javaTextPosition
+    position: absolute
+
+  .rectangle41TextBox
+    position: absolute
+
+
+  .logoTxt
+    position: absolute
+    top: 5.357vw
+    left: 9.5vw
+    width: 13.333vw
+    height: convertToVw(112)
+
   .textBig1
-    font-size: 60px
+    position: absolute
+    top: convertToVw(288)
+    left: 8.571vw
+    width: 0.38vw
+    height: 6.714vw
+    line-height: 6.714vw
+    font-size: 7.857vw
+    background-color: darkcyan
+
+
+@include media(">phone", "<=tablet")
+
+@include media("<=phone")
+  .textBig1
+    background-color: red
+    font-size: 20px

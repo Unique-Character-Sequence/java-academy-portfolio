@@ -1,7 +1,5 @@
 import React from 'react';
-import styles from "./MainPage.module.css"
 import "./styles/MainPage.sass"
-import Filler from "./Filler";
 import logo from "./assets/logo-txt(x2).png"
 import group4 from "./assets/Group 4.png"
 import group5 from "./assets/Group 5.png"
@@ -24,12 +22,13 @@ const MainPage = () => {
                         <div className="rectangle41TextBox">
                             <span className="textBig1">Становись</span>
                             <div className="javaTextPosition">
-                                <div className="rectangle16"/>
+                                <div className="rectangle16__above1400"/>
                                 <span className="textBigJavaBrackets">{"{"}</span>
                                 <span className="textBigJava">Java</span>
                                 <span className="textBigJavaBrackets">{"}"}</span>
                                 <span className="textBig3">-разработчиком</span>
                             </div>
+                            <div className="rectangle16"/>
                             <span className="textBig2">вместе с нами</span>
                             <img className="group4" src={group4} alt=""/>
                             <img className="group5" src={group5} alt=""/>

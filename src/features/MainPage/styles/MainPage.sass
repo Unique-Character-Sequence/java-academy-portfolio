@@ -1,8 +1,8 @@
 @import variables
 @import mixins
-@import responsive
+@import functions
 
-.mainDiv
+//.mainDiv
 /*max-height: 100vh
 /*height: 200vh
 /*background-color: red
@@ -10,54 +10,51 @@
 .welcomeDiv
   min-height: 874px
   height: 100vh
+  padding-top: 1px
+//Add a small padding to prevent margin collapsing
 
-  /*background-color: cornflowerblue
-  padding-top: 1px //Add a small padding to prevent margin collapsing
+.logoTxt
+  position: absolute
+  top: convertToVw_1400(75)
+  left: convertToVw_1400(133)
+  width: convertToVw_1400(186.67)
+  height: convertToVw_1400(112)
 
 .rectangle41
   box-sizing: border-box
-  height: 874px
+  height: convertToVw_1400(874)
   //width: 1870px // оригинал
   width: calc(100vw - 50px)
   margin: 25px 25px
   background-color: $mainGray
   border-radius: 20px
 
-.logoTxt
-  position: relative
-  top: 50px
-  left: 63px
-  width: 186px
-
-.rectangle41TextBox
-  width: 1235px
-  position: relative
-  margin-left: auto
-  margin-right: auto
-  padding-left: 73px
-  top: 161px
+//.rectangle41TextBox
+//  width: 1235px
+//  position: absolute
+//  margin-left: auto
+//  margin-right: auto
+//  padding-left: 73px
+//  top: 161px
 
 .textBig1
   @include rectangle41Text
+  position: absolute
+  top: convertToVw_1400(288)
+  left: convertToVw_1400(120)
+  width: convertToVw_1400(532)
   font-weight: 500
-  position: relative
-  bottom: 14px
   z-index: 1
 
 .javaTextPosition
   @include rectangle41Text
-  position: relative
-  top: 6px
-  left: 19px
+  position: absolute
+  z-index: 1
+  top: convertToVw_1400(404)
+  left: convertToVw_1400(139)
+  width: convertToVw_1400(1120)
   transform: rotate(-2.19deg)
   font-weight: 700
-
-.textBigJavaBrackets
-  @include rectangle41Text
-  position: relative
-  font-weight: 400
-  color: #FFFFFF
-  z-index: 1
 
 .textBigJava
   @include rectangle41Text
@@ -65,52 +62,67 @@
   position: relative
   z-index: 1
 
+.textBigJavaBrackets
+  @include rectangle41Text
+  //@include rectangle41Text
+  position: relative
+  font-weight: 400
+  color: #FFFFFF
+  z-index: 1
+
 .textBig2
   @include rectangle41Text
   font-weight: 500
-  position: relative
-  top: 20px
-  left: 393px
-  width: 842px
+  position: absolute
+  top: convertToVw_1400(508)
+  left: convertToVw_1400(513)
+  width: convertToVw_1400(842)
 
 .textBig3
   @include rectangle41Text
-  position: relative
+  position: absolute
   z-index: 1
 
 .textSmall1_Container
-  position: relative
-  left: 400px
-  bottom: 210px
-  width: 438px
+  position: absolute
+  top: convertToVw_1400(630)
+  left: convertToVw_1400(520)
+  width: convertToVw_1400(438)
 
 .textSmall1
-  height: 56px
+  height: convertToVw_1400(56)
   font-family: $mainFontFamily
-  font-size: 20px
+  font-size: convertToVw_1400(20)
   font-weight: 400
-  line-height: 24px
+  line-height: convertToVw_1400(24)
   text-align: left
   color: #FFFFFF
 
-.rectangle16
-  position: absolute
+.rectangle16__above1400
+  //TODO: временное решение. По идее можно заменить обычным rectangle16
+  @include rectangle16
   top: -14px
   left: -9px
   height: 128px
   width: 310px
-  background: $mainRed
-  border-radius: 2px
-  transform: rotate(-2.2deg)
+  @include media("<=1400px")
+    display: none
+
+.rectangle16
+  @include rectangle16
+  top: convertToVw_1400(406)
+  left: convertToVw_1400(130)
+  height: convertToVw_1400(128)
+  width: convertToVw_1400(310)
   z-index: 0
+  @include media(">1400px")
+    display: none
 
 .group4
-  @include groupImage(75px)
-  right: 30px
+  @include groupImage(658, 91, 355, 125)
 
 .group5
-  @include groupImage(-475px)
-  left: 547px
+  @include groupImage(234, 667, 595, 73)
 
 .ellipse4
   @include ellipse(330px, -70px, 566px)
@@ -119,7 +131,7 @@
   @include ellipse(407px, 804px, 1023px)
 
 .buttonStartLearning
-  position: relative
+  position: absolute
   height: 56px
   width: 251px
 
@@ -141,9 +153,10 @@
 
 .group6_ButtonsContainer
   //position: absolute
-  position: relative
+  position: absolute
   height: 60px
-  width: 1057px // можно регулировать
+  width: 1057px
+  // можно регулировать
   margin-left: auto
   margin-right: auto
   right: 39px
@@ -171,7 +184,7 @@
 
 .auth_ButtonsContainer
   display: flex
-  position: relative
+  position: absolute
   bottom: 873px
   right: 75px
   margin-left: auto
@@ -187,8 +200,7 @@
   margin-left: 10px
   @include auth_Button(0px)
 
-$bp-table: 768px
+// RESPONSIVE DESIGN
 
-@media (max-width: $bp-table)
-  .textBig1
-    font-size: 60px
+//@import responsive
+@import responsiveAbove1400px

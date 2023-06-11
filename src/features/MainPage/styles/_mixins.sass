@@ -1,22 +1,34 @@
 @import variables
+@import include-media
+@import functions
 
 @mixin rectangle41Text
   color: #DEDCE7
   font-family: $mainFontFamily
-  font-size: 110px
-  line-height: 94px
-  /* identical to box height, or 94px
   letter-spacing: -0.06em
   transition: 0.2s
+  @include media(">tablet", "<=1400px") // TODO: Временное решение
+    height: convertToVw_1400(94)
+    line-height: convertToVw_1400(94.08)
+    font-size: convertToVw_1400(110)
 
-@mixin groupImage($top)
-  position: relative
+@mixin rectangle16
+  position: absolute
+  background: $mainRed
+  border-radius: 2px
+  transform: rotate(-4.39deg)
+
+@mixin groupImage($top, $left, $width, $height)
+  position: absolute
   display: block
-  top: $top
+  top: convertToVw_1400($top)
+  left: convertToVw_1400($left)
+  width: convertToVw_1400($width)
+  height: convertToVw_1400($height)
 
 @mixin ellipse($width, $top, $left)
   position: absolute
-  height: 190px
+  height: 190px // TODO: Пофиксить на convertToVw
   width: $width
   top: $top
   left: $left
@@ -25,6 +37,7 @@
   z-index: 2
 
 @mixin group6_Button($width, $marginRight)
+  // TODO: Пофиксить на convertToVw
   width: $width
   height: 60px
   border-radius: 30px
@@ -43,6 +56,7 @@
     color: $mainRed
 
 @mixin auth_Button($left)
+  // TODO: Пофиксить на convertToVw
   display: flex
   left: $left
   height: 44px
