@@ -6,73 +6,73 @@
   color: #DEDCE7
   font-family: $mainFontFamily
   letter-spacing: -0.06em
-  transition: 0.2s
-  @include media(">tablet", "<=1400px") // TODO: Временное решение
-    height: convertToVw_1400(94)
-    line-height: convertToVw_1400(94.08)
-    font-size: convertToVw_1400(110)
+  @include media(">=tablet", "<=1400px") // TODO: Временное решение?
+    height: 6.714vw
+    line-height: 6.719vw
+    font-size: 7.857vw
+  @include media(">1400px")
+    height: 94px
+    line-height: 94px
+    font-size: 110px
 
 @mixin rectangle16
   position: absolute
   background: $mainRed
-  border-radius: 2px
+  border-radius: 0.1429vw
   transform: rotate(-4.39deg)
 
-@mixin groupImage($top, $left, $width, $height)
-  position: absolute
-  display: block
-  top: convertToVw_1400($top)
-  left: convertToVw_1400($left)
-  width: convertToVw_1400($width)
-  height: convertToVw_1400($height)
+//@mixin groupImage($top, $left, $width, $height)
+//  position: absolute
+//  display: block
+//  top: convertToVw_1400($top)
+//  left: convertToVw_1400($left)
+//  width: convertToVw_1400($width)
+//  height: convertToVw_1400($height)
 
 @mixin ellipse($width, $top, $left)
   position: absolute
-  height: 190px // TODO: Пофиксить на convertToVw
+  height: 13.5714vw
   width: $width
   top: $top
   left: $left
   background: rgba(255, 255, 255, 0.3)
-  filter: blur(50px)
+  filter: blur(3.5714vw)
+  //filter: blur(convertToVw_1400(50))
   z-index: 2
 
 @mixin group6_Button($width, $marginRight)
-  // TODO: Пофиксить на convertToVw
   width: $width
-  height: 60px
-  border-radius: 30px
-  padding: 10px 30px
-  gap: 10px
-  border: 2px solid $mainGray
+  height: 4.285vw
+  border-radius: 2.1429vw
+  padding: 0.714vw 2.142vw
+  gap: 0.714vw
+  border: 2px solid $mainBlue // с двумя пикселями vw странно работает *
   box-sizing: border-box
   background: #FFFFFF
   margin-right: $marginRight
   cursor: pointer
-  transition: 0.2s
-  color: $mainGray
+  color: $mainBlue
 
   &:hover
-    border: 2px solid $mainRed
+    transition: 0.2s
+    border: 2px solid $mainRed // *см. выше
     color: $mainRed
 
-@mixin auth_Button($left)
-  // TODO: Пофиксить на convertToVw
+@mixin auth_Button
   display: flex
-  left: $left
-  height: 44px
-  border-radius: 25px
-  padding: 10px 30px 10px 30px
-  gap: 10px
+  height: 3.1429vw
+  border-radius: 1.7857vw
+  padding: 0.7143vw 2.1429vw 0.7143vw 2.1429vw
+  gap: 0.7143vw
   border: none
   background-color: #FFFFFF
-  color: $mainGray
+  color: $mainBlue
   font-family: $mainFontFamily
-  font-size: 20px
+  font-size: 1.4286vw
   font-weight: 400
-  line-height: 24px
-  transition: 0.2s
+  line-height: 1.7143vw
   cursor: pointer
-
   &:hover
+    transition: 0.2s
     background-color: #4B6FCB
     color: #FFFFFF
