@@ -275,25 +275,33 @@
     line-height: 1.7143vw
 
 .auth_ButtonsContainer
+  display: flex
   @include media(">1400px")
+    position: absolute
     top: 97px
-    left: 975px
+    right: 65px
+    transition: 0.2s
   @include media(">=tablet", "<=1400px")
+    position: absolute
     top: 6.9286vw
     left: 69.6429vw
-  display: flex
-  position: absolute
-  margin-left: auto
-  margin-right: auto
+    margin-left: auto
+    margin-right: auto
+
 
 .auth_Button1
-  margin-left: auto
   @include auth_Button
+  @include media(">1400px")
+    margin-left: auto
+  @include media(">=tablet", "<=1400px")
+    margin-left: auto
 
 .auth_Button2
-
-  margin-left: 0.7143vw
   @include auth_Button
+  @include media(">1400px")
+    margin-left: 10px
+  @include media(">=tablet", "<=1400px")
+    margin-left: 0.7143vw
 
 // RESPONSIVE DESIGN
 
