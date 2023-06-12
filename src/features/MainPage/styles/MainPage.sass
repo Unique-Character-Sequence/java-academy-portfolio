@@ -21,7 +21,7 @@
     width: 187px
     height: 112px
     transition: 0.2s
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     top: 5.357vw
     left: 9.5vw
     width: 13.334vw
@@ -38,7 +38,7 @@
     top: 25px
     left: 25px
     border-radius: 20px
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     height: 62.429vw
     width: 96.4286vw
     top: 1.7857vw
@@ -62,7 +62,7 @@
     top: 288px
     left: 120px
     width: 532px
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     top: 20.571vw
     left: 8.571vw
     width: 38vw
@@ -77,7 +77,7 @@
     top: 404px
     left: 139px
     width: 1120px
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     top: 28.857vw
     left: 9.929vw
     width: 80vw
@@ -105,7 +105,7 @@
     top: 508px
     left: 513px
     width: 844px
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     top: 36.286vw
     left: 36.643vw
     width: 60.286vw
@@ -127,7 +127,7 @@
     width: 438px
     line-height: 24px
     font-size: 20px
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     top: 45vw
     left: 37.143vw
     width: 31.286vw
@@ -147,7 +147,7 @@
 .rectangle16
   @include rectangle16
   z-index: 0
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     top: 28.857vw
     left: 9.286vw
     height: 9.143vw
@@ -163,7 +163,7 @@
     left: 91px
     width: 355px
     height: 125px
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     top: 47.0vw
     left: 6.5vw
     width: 25.357vw
@@ -177,7 +177,7 @@
     left: 667px
     width: 595px
     height: 73px
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     top: 16.714vw
     left: 47.643vw
     width: 42.5vw
@@ -187,13 +187,13 @@
 .ellipse4
   @include media(">1400px")
     @include ellipse(339px, -85px, 287px)
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     @include ellipse(24.2143vw, -6.0714vw, 20.5vw)
 
 .ellipse5
   @include media(">1400px")
     @include ellipse(407px, 804px, 763px)
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     @include ellipse(29.0714vw, 57.4286vw, 54.5vw)
 
 .buttonStartLearning
@@ -212,7 +212,7 @@
     border-radius: 10px
     font-size: 20px
     line-height: 24px
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     height: 4.0000vw
     width: 17.9286vw
     left: 37.1429vw
@@ -234,7 +234,7 @@
     left: 171px
     height: 60px
     border-radius: 30px
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     top: 62.0714vw
     left: 12.2143vw
     height: 4.2857vw
@@ -243,25 +243,25 @@
 .group6_Button1
   @include media(">1400px")
     @include group6_Button(260px, 25px)
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     @include group6_Button(18.57vw, 1.7857vw)
 
 .group6_Button2
   @include media(">1400px")
     @include group6_Button(283px, 25px)
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     @include group6_Button(20.21vw, 1.7857vw)
 
 .group6_Button3
   @include media(">1400px")
     @include group6_Button(179px, 25px)
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     @include group6_Button(12.785vw, 1.7857vw)
 
 .group6_Button4
   @include media(">1400px")
     @include group6_Button(260px, 0px)
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     @include group6_Button(18.57vw, 0px)
 
 .group6_ButtonContent
@@ -270,7 +270,7 @@
   @include media(">1400px")
     font-size: 20px
     line-height: 24px
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     font-size: 1.4285vw
     line-height: 1.7143vw
 
@@ -281,7 +281,7 @@
     top: 97px
     right: 65px
     transition: 0.2s
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     position: absolute
     top: 6.9286vw
     left: 69.6429vw
@@ -293,17 +293,12 @@
   @include auth_Button
   @include media(">1400px")
     margin-left: auto
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     margin-left: auto
 
 .auth_Button2
   @include auth_Button
   @include media(">1400px")
     margin-left: 10px
-  @include media(">=tablet", "<=1400px")
+  @include media(">tablet", "<=1400px")
     margin-left: 0.7143vw
-
-// RESPONSIVE DESIGN
-
-//@import responsive
-//@import responsiveAbove1400px
