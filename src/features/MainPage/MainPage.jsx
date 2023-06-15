@@ -26,10 +26,10 @@ const MainPage = () => {
                             <span className="textBigJavaBrackets">{"{"}</span>
                             <span className="textBigJava">Java</span>
                             <span className="textBigJavaBrackets">{"}"}</span>
-                            <span className="textBig3">-разработчиком</span>
+                            <span className="textBig2">-разработчиком</span>
                         </div>
                         <div className="rectangle16"/>
-                        <span className="textBig2">вместе с нами</span>
+                        <span className="textBig3">вместе с нами</span>
                         <img className="group4" src={group4} alt=""/>
                         <img className="group5" src={group5} alt=""/>
                         <div className="group6_ButtonsContainer">

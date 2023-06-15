@@ -14,6 +14,11 @@
     height: 6.714vw
     line-height: 6.719vw
     font-size: 7.857vw
+  @include media(">phone", "<=tablet")
+    height: 6.6406vw
+    line-height: 6.6406vw
+    font-size: 7.8125vw
+
 
 @mixin rectangle16
   position: absolute
@@ -25,20 +30,29 @@
   @include media(">tablet", "<=1400px")
     transform: rotate(-4.39deg)
     border-radius: 0.1429vw
+  @include media(">phone", "<=tablet")
+    transform: rotate(-4.39deg)
+    border-radius: 1px
 
 @mixin ellipse($width, $top, $left)
   position: absolute
   width: $width
   top: $top
   left: $left
-  background: rgba(255, 255, 255, 0.3)
+  background: rgba(255, 255, 255, 0.2)
   z-index: 2
   @include media(">1400px")
     height: 190px
     filter: blur(50px)
+    background: rgba(255, 255, 255, 0.3)
   @include media(">tablet", "<=1400px")
     height: 13.5714vw
     filter: blur(3.5714vw)
+    background: rgba(255, 255, 255, 0.3)
+  @include media(">phone", "<=tablet")
+    height: 19.7917vw
+    filter: blur(6.5104vw)
+    background: rgba(255, 255, 255, 0.2)
 
 @mixin group6_Button($width, $marginRight)
   width: $width
@@ -59,6 +73,11 @@
     border-radius: 2.1429vw
     padding: 0.714vw 2.142vw
     gap: 0.714vw
+  @include media(">phone", "<=tablet")
+    height: 7.8125vw
+    vertical-align: middle
+    border-radius: 3.9063vw
+    gap: 1.3021vw
 
   &:hover
     transition: 0.2s
@@ -88,6 +107,13 @@
     gap: 0.7143vw
     font-size: 1.4286vw
     line-height: 1.7143vw
+  @include media(">phone", "<=tablet")
+    height: 5.7292vw
+    border-radius: 3.2552vw
+    padding: 1.3021vw 3.9063vw 1.3021vw 3.9063vw
+    gap: 1.3021vw
+    font-size: 2.6042vw
+    line-height: 3.1250vw
 
   &:hover
     transition: 0.2s

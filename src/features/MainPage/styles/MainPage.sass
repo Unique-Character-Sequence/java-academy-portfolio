@@ -15,6 +15,7 @@
 
 .logoTxt
   position: absolute
+  z-index: 3
   @include media(">1400px")
     top: 75px
     left: 88px
@@ -26,6 +27,11 @@
     left: 9.5vw
     width: 13.334vw
     height: 8vw
+  @include media(">phone", "<=tablet")
+    top: 7.8125vw
+    left: 7.2917vw
+    width: 21.7448vw
+    height: 13.0208vw
 
 .rectangle41
   position: absolute
@@ -44,6 +50,13 @@
     top: 1.7857vw
     left: 1.7857vw
     border-radius: 1.4286vw
+  @include media(">phone", "<=tablet")
+    height: 100.2604vw
+    width: 96.0938vw
+    left: 1.9531vw
+    top: 3.2552vw
+    border-radius: 2.6042vw
+    
 
 .rectangle41TextBox
   @include media(">1400px")
@@ -66,6 +79,10 @@
     top: 20.571vw
     left: 8.571vw
     width: 38vw
+  @include media(">phone", "<=tablet")
+    width: 37.7604vw
+    left: 5.8594vw
+    top: 37.8906vw
 
 .javaTextPosition
   @include rectangle41Text
@@ -81,6 +98,10 @@
     top: 28.857vw
     left: 9.929vw
     width: 80vw
+  @include media(">phone", "<=tablet")
+    top: 46.3vw
+    left: 7.3615vw
+    width: 79.5573vw
 
 
 .textBigJava
@@ -99,6 +120,11 @@
 
 .textBig2
   @include rectangle41Text
+  position: absolute
+  z-index: 1
+
+.textBig3
+  @include rectangle41Text
   font-weight: 500
   position: absolute
   @include media(">1400px")
@@ -109,11 +135,11 @@
     top: 36.286vw
     left: 36.643vw
     width: 60.286vw
+  @include media(">phone", "<=tablet")
+    top: 54.2vw
+    left: 38.5417vw
+    width: 62.7604vw
 
-.textBig3
-  @include rectangle41Text
-  position: absolute
-  z-index: 1
 
 .textSmall1_Container
   font-family: $mainFontFamily
@@ -133,27 +159,40 @@
     width: 31.286vw
     line-height: 1.714vw
     font-size: 1.4286vw
+  @include media(">phone", "<=tablet")
+    top: 65.3646vw
+    left: 39.4531vw
+    width: 57.0313vw
+    line-height: 3.1250vw
+    font-size: 2.6042vw
 
 .rectangle16__above1400
   //TODO: временное решение. По идее можно заменить обычным rectangle16
   @include rectangle16
-  top: -14px
-  left: -9px
-  height: 128px
-  width: 310px
+  @include media(">1400px")
+    top: -14px
+    left: -9px
+    height: 128px
+    width: 310px
   @include media("<=1400px")
     display: none
 
 .rectangle16
   @include rectangle16
   z-index: 0
+  @include media(">1400px")
+    display: none
   @include media(">tablet", "<=1400px")
     top: 28.857vw
     left: 9.286vw
     height: 9.143vw
     width: 22.143vw
-  @include media(">1400px")
-    display: none
+  @include media(">phone", "<=tablet")
+    top: 46.6vw
+    left: 6.82vw
+    height: 9.5052vw
+    width: 23.0469vw
+    border-radius: 1px
 
 .group4
   position: absolute
@@ -168,6 +207,11 @@
     left: 6.5vw
     width: 25.357vw
     height: 8.929vw
+  @include media(">phone", "<=tablet")
+    height: 16.2760vw
+    width: 46.2240vw
+    left: -11.0677vw
+    top: 66.7969vw
 
 .group5
   position: absolute
@@ -182,6 +226,11 @@
     left: 47.643vw
     width: 42.5vw
     height: 5.214vw
+  @include media(">phone", "<=tablet")
+    top: 31.1198vw
+    left: 48.3073vw
+    width: 77.4740vw
+    height: 9.5052vw
 
 
 .ellipse4
@@ -189,12 +238,16 @@
     @include ellipse(339px, -85px, 287px)
   @include media(">tablet", "<=1400px")
     @include ellipse(24.2143vw, -6.0714vw, 20.5vw)
+  @include media(">phone", "<=tablet")
+    @include ellipse(35.2865vw, -8.0729vw, 10.2865vw)
 
 .ellipse5
   @include media(">1400px")
     @include ellipse(407px, 804px, 763px)
   @include media(">tablet", "<=1400px")
     @include ellipse(29.0714vw, 57.4286vw, 54.5vw)
+  @include media(">phone", "<=tablet")
+    @include ellipse(52.9948vw, 90.2344vw, 33.9844vw)
 
 .buttonStartLearning
   position: absolute
@@ -204,6 +257,7 @@
   font-weight: 600
   color: #FFFFFF
   cursor: pointer
+  z-index: 3
   @include media(">1400px")
     height: 56px
     width: 251px
@@ -220,6 +274,15 @@
     border-radius: 0.7143vw
     font-size: 1.4286vw
     line-height: 1.7143vw
+  @include media(">phone", "<=tablet")
+    height: 7.2917vw
+    width: 32.6823vw
+    left: 39.4531vw
+    top: 78.5156vw
+    border-radius: 1.3021vw
+    font-size: 2.6042vw
+    line-height: 3.1250vw
+
   &:hover
     transition: 0.2s
     background: #DA3739
@@ -239,30 +302,43 @@
     left: 12.2143vw
     height: 4.2857vw
     border-radius: 2.1429vw
+  @include media(">phone", "<=tablet")
+    top: 99.3490vw
+    left: 5.8594vw
+    height: 7.8125vw
+    border-radius: 3.9063vw
 
 .group6_Button1
   @include media(">1400px")
     @include group6_Button(260px, 25px)
   @include media(">tablet", "<=1400px")
     @include group6_Button(18.57vw, 1.7857vw)
+  @include media(">phone", "<=tablet")
+    @include group6_Button(20.1823vw, 1.3021vw)
 
 .group6_Button2
   @include media(">1400px")
     @include group6_Button(283px, 25px)
   @include media(">tablet", "<=1400px")
     @include group6_Button(20.21vw, 1.7857vw)
+  @include media(">phone", "<=tablet")
+    @include group6_Button(23.1771vw, 1.3021vw)
 
 .group6_Button3
   @include media(">1400px")
     @include group6_Button(179px, 25px)
   @include media(">tablet", "<=1400px")
     @include group6_Button(12.785vw, 1.7857vw)
+  @include media(">phone", "<=tablet")
+    @include group6_Button(14.8438vw, 1.3021vw)
 
 .group6_Button4
   @include media(">1400px")
     @include group6_Button(260px, 0px)
   @include media(">tablet", "<=1400px")
     @include group6_Button(18.57vw, 0px)
+  @include media(">phone", "<=tablet")
+    @include group6_Button(26.1719vw, 0px)
 
 .group6_ButtonContent
   font-family: $mainFontFamily
@@ -273,6 +349,9 @@
   @include media(">tablet", "<=1400px")
     font-size: 1.4285vw
     line-height: 1.7143vw
+  @include media(">phone", "<=tablet")
+    font-size: 2.0833vw
+    line-height: 2.4740vw
 
 .auth_ButtonsContainer
   display: flex
@@ -287,6 +366,12 @@
     left: 69.6429vw
     margin-left: auto
     margin-right: auto
+  @include media(">phone", "<=tablet")
+    position: absolute
+    top: 9.8958vw
+    left: 53.9063vw
+    margin-left: auto
+    margin-right: auto
 
 
 .auth_Button1
@@ -295,6 +380,8 @@
     margin-left: auto
   @include media(">tablet", "<=1400px")
     margin-left: auto
+  @include media(">phone", "<=tablet")
+    margin-left: auto
 
 .auth_Button2
   @include auth_Button
@@ -302,3 +389,5 @@
     margin-left: 10px
   @include media(">tablet", "<=1400px")
     margin-left: 0.7143vw
+  @include media(">phone", "<=tablet")
+    margin-left: 1.3021vw
