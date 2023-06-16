@@ -20,6 +20,11 @@
     left: 7.2917vw
     width: 21.7448vw
     height: 13.0208vw
+  @include media("<=phone")
+    top: 11.25vw
+    left: 8.4375vw
+    width: 33.75vw
+    height: 20.3125vw
 
 .group4
   position: absolute
@@ -35,10 +40,18 @@
     width: 25.357vw
     height: 8.929vw
   @include media(">phone", "<=tablet")
+    //TODO: Исправить ширину по образцу телефона. Негоже за края вылазить
     height: 16.2760vw
     width: 46.2240vw
     left: -11.0677vw
     top: 66.7969vw
+  @include media("<=phone")
+    height: 20vw
+    width: 32.5vw
+    left: 5.94vw
+    top: 74.0625vw
+    object-fit: cover
+    object-position: 100% 0
 
 .group5
   position: absolute
@@ -58,5 +71,12 @@
     left: 48.3073vw
     width: 48vw
     height: 9.5052vw
+    object-fit: cover
+    object-position: 0 100%
+  @include media("<=phone")
+    height: 11.5625vw
+    width: 47.5vw
+    left: 49.0625vw
+    top: 32.8125vw
     object-fit: cover
     object-position: 0 100%
