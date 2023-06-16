@@ -15,9 +15,14 @@
     left: 8.571vw
     width: 38vw
   @include media(">phone", "<=tablet")
-    width: 37.7604vw
-    left: 5.8594vw
     top: 37.8906vw
+    left: 5.8594vw
+    width: 37.7604vw
+  @include media("<=phone")
+    top: 44.3750vw
+    left: 7.8125vw
+    width: 37.8125vw
+
 
 .javaTextPosition
   @include rectangle41Text
@@ -37,25 +42,29 @@
     top: 46.3vw
     left: 7.3615vw
     width: 79.5573vw
+  @include media("<=phone")
+    top: 52.8vw
+    left: 8.4375vw
+    width: 79.6875vw
 
-.textBigJava
-  @include rectangle41Text
-  color: #FFFFFF
-  position: relative
-  z-index: 1
+  .textBigJava
+    @include rectangle41Text
+    color: #FFFFFF
+    position: relative
+    z-index: 1
 
-.textBigJavaBrackets
-  @include rectangle41Text
-  //@include rectangle41Text
-  position: relative
-  font-weight: 400
-  color: #FFFFFF
-  z-index: 1
+  .textBigJavaBrackets
+    @include rectangle41Text
+    //@include rectangle41Text
+    position: relative
+    font-weight: 400
+    color: #FFFFFF
+    z-index: 1
 
-.textBig2
-  @include rectangle41Text
-  position: absolute
-  z-index: 1
+  .textBig2
+    @include rectangle41Text
+    position: absolute
+    z-index: 1
 
 .textBig3
   @include rectangle41Text
@@ -70,6 +79,9 @@
   @include media(">phone", "<=tablet")
     top: 54.2vw
     left: 38.5417vw
+  @include media("<=phone")
+    top: 60.9375vw
+    left: 41.25vw
 
 .textSmall1_Container
   font-family: $mainFontFamily
@@ -95,3 +107,9 @@
     width: 57.0313vw
     line-height: 3.1250vw
     font-size: 2.6042vw
+  @include media("<=phone")
+    top: 71.2500vw
+    left: 41.8750vw
+    width: 53.1250vw
+    line-height: 5.0000vw
+    font-size: 4.0625vw

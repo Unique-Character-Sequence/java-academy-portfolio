@@ -18,21 +18,24 @@
     height: 6.6406vw
     line-height: 6.6406vw
     font-size: 7.8125vw
+  @include media("<=phone")
+    height: 6.5625vw
+    line-height: 6.5625vw
+    font-size: 7.8125vw
 
 
-@mixin rectangle16
+@mixin rectangle16Mixin
   position: absolute
   background: $mainRed
   @include media(">1400px")
     //повёрнутый элемент внутри другого повёрнутого элемента
     transform: rotate(-2.2deg)
-    border-radius: 2px
   @include media(">tablet", "<=1400px")
     transform: rotate(-4.39deg)
-    border-radius: 0.1429vw
   @include media(">phone", "<=tablet")
     transform: rotate(-4.39deg)
-    border-radius: 1px
+  @include media("<=phone")
+    transform: rotate(-4.39deg)
 
 @mixin ellipse($width, $top, $left)
   position: absolute
@@ -52,6 +55,10 @@
   @include media(">phone", "<=tablet")
     height: 19.7917vw
     filter: blur(6.5104vw)
+    background: rgba(255, 255, 255, 0.2)
+  @include media("<=phone")
+    height: 35vw
+    filter: blur(11.5625vw)
     background: rgba(255, 255, 255, 0.2)
 
 @mixin group6_Button($width, $marginRight)

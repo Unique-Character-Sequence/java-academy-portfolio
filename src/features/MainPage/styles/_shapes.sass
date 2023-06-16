@@ -43,17 +43,18 @@
 
 .rectangle16__above1400
   //TODO: временное решение. По идее можно заменить обычным rectangle16
-  @include rectangle16
+  @include rectangle16Mixin
   @include media(">1400px")
     top: -14px
     left: -9px
     height: 128px
     width: 310px
+    border-radius: 2px
   @include media("<=1400px")
     display: none
 
 .rectangle16
-  @include rectangle16
+  @include rectangle16Mixin
   z-index: 0
   @include media(">1400px")
     display: none
@@ -62,11 +63,18 @@
     left: 9.286vw
     height: 9.143vw
     width: 22.143vw
+    border-radius: 2px
   @include media(">phone", "<=tablet")
     top: 46.6vw
     left: 6.82vw
     height: 9.5052vw
     width: 23.0469vw
+    border-radius: 1px
+  @include media("<=phone")
+    height: 9.3750vw
+    width: 22.8125vw
+    left: 7.8125vw
+    top: 52.7500vw
     border-radius: 1px
 
 
@@ -77,6 +85,8 @@
     @include ellipse(24.2143vw, -6.0714vw, 20.5vw)
   @include media(">phone", "<=tablet")
     @include ellipse(35.2865vw, -8.0729vw, 10.2865vw)
+  @include media("<=phone")
+    @include ellipse(62.5vw, -16.875vw, 11.5625vw)
 
 .ellipse5
   @include media(">1400px")
@@ -85,4 +95,5 @@
     @include ellipse(29.0714vw, 57.4286vw, 54.5vw)
   @include media(">phone", "<=tablet")
     @include ellipse(52.9948vw, 90.2344vw, 33.9844vw)
-
+  @include media("<=phone")
+    @include ellipse(62.5vw, 95.9375vw, 34.0625vw)

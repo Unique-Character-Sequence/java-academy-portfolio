@@ -1,6 +1,7 @@
 import React from 'react';
 import "./styles/MainPage.sass"
-import logo from "./assets/logo-txt(x2).png"
+import logo from "./assets/logo-txt_desktop.png"
+import logoRetina from "./assets/logo-txt_desktop@2x.png"
 import group4 from "./assets/Group 4.png"
 import group5 from "./assets/Group 5.png"
 import Fade from "@mui/material/Fade";
@@ -17,7 +18,7 @@ const MainPage = () => {
             {/*<Filler/>*/}
             <div className="welcomeDiv">
                 <div className="rectangle41"/>
-                <img className="logoTxt" src={logo} alt=""/>
+                <img className="logoTxt" src={logo} srcSet={`${logoRetina} 2x`} alt=""/>
                 <Fade in={clicked}>
                     <div className="rectangle41TextBox">
                         <span className="textBig1">Становись</span>
