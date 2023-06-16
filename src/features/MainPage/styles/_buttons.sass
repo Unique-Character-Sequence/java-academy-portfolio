@@ -1,0 +1,145 @@
+@import variables
+@import mixins
+
+.buttonStartLearning
+  position: absolute
+  border: none
+  background: $mainRed
+  font-family: $mainFontFamily
+  font-weight: 600
+  color: #FFFFFF
+  cursor: pointer
+  z-index: 3
+  @include media(">1400px")
+    height: 56px
+    width: 251px
+    left: 520px
+    top: 727px
+    border-radius: 10px
+    font-size: 20px
+    line-height: 24px
+  @include media(">tablet", "<=1400px")
+    height: 4.0000vw
+    width: 17.9286vw
+    left: 37.1429vw
+    top: 51.9286vw
+    border-radius: 0.7143vw
+    font-size: 1.4286vw
+    line-height: 1.7143vw
+  @include media(">phone", "<=tablet")
+    height: 7.2917vw
+    width: 32.6823vw
+    left: 39.4531vw
+    top: 78.5156vw
+    border-radius: 1.3021vw
+    font-size: 2.6042vw
+    line-height: 3.1250vw
+
+  &:hover
+    transition: 0.2s
+    background: #DA3739
+
+.group6_ButtonsContainer
+  position: absolute
+  margin-left: auto
+  margin-right: auto
+  z-index: 3
+  @include media(">1400px")
+    top: 869px
+    left: 171px
+    height: 60px
+    border-radius: 30px
+  @include media(">tablet", "<=1400px")
+    top: 62.0714vw
+    left: 12.2143vw
+    height: 4.2857vw
+    border-radius: 2.1429vw
+  @include media(">phone", "<=tablet")
+    top: 99.3490vw
+    left: 5.8594vw
+    height: 7.8125vw
+    border-radius: 3.9063vw
+
+.group6_Button1
+  @include media(">1400px")
+    @include group6_Button(260px, 25px)
+  @include media(">tablet", "<=1400px")
+    @include group6_Button(18.57vw, 1.7857vw)
+  @include media(">phone", "<=tablet")
+    @include group6_Button(20.1823vw, 1.3021vw)
+
+.group6_Button2
+  @include media(">1400px")
+    @include group6_Button(283px, 25px)
+  @include media(">tablet", "<=1400px")
+    @include group6_Button(20.21vw, 1.7857vw)
+  @include media(">phone", "<=tablet")
+    @include group6_Button(23.1771vw, 1.3021vw)
+
+.group6_Button3
+  @include media(">1400px")
+    @include group6_Button(179px, 25px)
+  @include media(">tablet", "<=1400px")
+    @include group6_Button(12.785vw, 1.7857vw)
+  @include media(">phone", "<=tablet")
+    @include group6_Button(14.8438vw, 1.3021vw)
+
+.group6_Button4
+  @include media(">1400px")
+    @include group6_Button(260px, 0px)
+  @include media(">tablet", "<=1400px")
+    @include group6_Button(18.57vw, 0px)
+  @include media(">phone", "<=tablet")
+    @include group6_Button(26.1719vw, 0px)
+
+.group6_ButtonContent
+  font-family: $mainFontFamily
+  font-weight: 700
+  @include media(">1400px")
+    font-size: 20px
+    line-height: 24px
+  @include media(">tablet", "<=1400px")
+    font-size: 1.4285vw
+    line-height: 1.7143vw
+  @include media(">phone", "<=tablet")
+    font-size: 2.0833vw
+    line-height: 2.4740vw
+
+.auth_ButtonsContainer
+  display: flex
+  @include media(">1400px")
+    position: absolute
+    top: 97px
+    right: 65px
+    transition: 0.2s
+  @include media(">tablet", "<=1400px")
+    position: absolute
+    top: 6.9286vw
+    left: 69.6429vw
+    margin-left: auto
+    margin-right: auto
+  @include media(">phone", "<=tablet")
+    position: absolute
+    top: 9.8958vw
+    left: 53.9063vw
+    margin-left: auto
+    margin-right: auto
+
+
+.auth_Button1
+  @include auth_Button
+  @include media(">1400px")
+    margin-left: auto
+  @include media(">tablet", "<=1400px")
+    margin-left: auto
+  @include media(">phone", "<=tablet")
+    margin-left: auto
+
+.auth_Button2
+  @include auth_Button
+  @include media(">1400px")
+    margin-left: 10px
+  @include media(">tablet", "<=1400px")
+    margin-left: 0.7143vw
+  @include media(">phone", "<=tablet")
+    margin-left: 1.3021vw

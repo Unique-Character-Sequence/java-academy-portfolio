@@ -1,0 +1,97 @@
+@import variables
+@import mixins
+
+.textBig1
+  @include rectangle41Text
+  position: absolute
+  font-weight: 500
+  z-index: 1
+  @include media(">1400px")
+    top: 288px
+    left: 120px
+    width: 532px
+  @include media(">tablet", "<=1400px")
+    top: 20.571vw
+    left: 8.571vw
+    width: 38vw
+  @include media(">phone", "<=tablet")
+    width: 37.7604vw
+    left: 5.8594vw
+    top: 37.8906vw
+
+.javaTextPosition
+  @include rectangle41Text
+  position: absolute
+  z-index: 1
+  transform: rotate(-2.19deg)
+  font-weight: 700
+  @include media(">1400px")
+    top: 404px
+    left: 139px
+    width: 1120px
+  @include media(">tablet", "<=1400px")
+    top: 28.857vw
+    left: 9.929vw
+    width: 80vw
+  @include media(">phone", "<=tablet")
+    top: 46.3vw
+    left: 7.3615vw
+    width: 79.5573vw
+
+.textBigJava
+  @include rectangle41Text
+  color: #FFFFFF
+  position: relative
+  z-index: 1
+
+.textBigJavaBrackets
+  @include rectangle41Text
+  //@include rectangle41Text
+  position: relative
+  font-weight: 400
+  color: #FFFFFF
+  z-index: 1
+
+.textBig2
+  @include rectangle41Text
+  position: absolute
+  z-index: 1
+
+.textBig3
+  @include rectangle41Text
+  font-weight: 500
+  position: absolute
+  @include media(">1400px")
+    top: 508px
+    left: 513px
+  @include media(">tablet", "<=1400px")
+    top: 36.286vw
+    left: 36.643vw
+  @include media(">phone", "<=tablet")
+    top: 54.2vw
+    left: 38.5417vw
+
+.textSmall1_Container
+  font-family: $mainFontFamily
+  font-weight: 400
+  text-align: left
+  color: #FFFFFF
+  position: absolute
+  @include media(">1400px")
+    top: 630px
+    left: 520px
+    width: 438px
+    line-height: 24px
+    font-size: 20px
+  @include media(">tablet", "<=1400px")
+    top: 45vw
+    left: 37.143vw
+    width: 31.286vw
+    line-height: 1.714vw
+    font-size: 1.4286vw
+  @include media(">phone", "<=tablet")
+    top: 65.3646vw
+    left: 39.4531vw
+    width: 57.0313vw
+    line-height: 3.1250vw
+    font-size: 2.6042vw

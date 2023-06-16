@@ -1,0 +1,62 @@
+@import variables
+@import mixins
+
+.logoTxt
+  position: absolute
+  z-index: 3
+  @include media(">1400px")
+    top: 75px
+    left: 88px
+    width: 187px
+    height: 112px
+    transition: 0.2s
+  @include media(">tablet", "<=1400px")
+    top: 5.357vw
+    left: 9.5vw
+    width: 13.334vw
+    height: 8vw
+  @include media(">phone", "<=tablet")
+    top: 7.8125vw
+    left: 7.2917vw
+    width: 21.7448vw
+    height: 13.0208vw
+
+.group4
+  position: absolute
+  display: block
+  @include media(">1400px")
+    top: 658px
+    left: 91px
+    width: 355px
+    height: 125px
+  @include media(">tablet", "<=1400px")
+    top: 47.0vw
+    left: 6.5vw
+    width: 25.357vw
+    height: 8.929vw
+  @include media(">phone", "<=tablet")
+    height: 16.2760vw
+    width: 46.2240vw
+    left: -11.0677vw
+    top: 66.7969vw
+
+.group5
+  position: absolute
+  display: block
+  @include media(">1400px")
+    top: 234px
+    left: 667px
+    width: 595px
+    height: 73px
+  @include media(">tablet", "<=1400px")
+    top: 16.714vw
+    left: 47.643vw
+    width: 42.5vw
+    height: 5.214vw
+  @include media(">phone", "<=tablet")
+    top: 31.1198vw
+    left: 48.3073vw
+    width: 48vw
+    height: 9.5052vw
+    object-fit: cover
+    object-position: 0 100%
