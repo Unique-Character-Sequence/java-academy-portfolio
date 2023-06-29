@@ -3,7 +3,10 @@
 @import text
 @import buttons
 
-.mainDiv
+.mainDivBurger
+    position: absolute
+    bottom: 1px
+    z-index: 1000
     display: flex
     justify-content: center
     height: 100vh
@@ -48,9 +51,3 @@
         height: 6.8750vw
         top: 7.1875vw
         left: 83.4375vw
-
-.input-button1
-    @include inputMixin(520px)
-
-.input-button2
-    @include inputMixin(580px)

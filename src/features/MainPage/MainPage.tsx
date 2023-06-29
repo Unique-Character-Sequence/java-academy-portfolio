@@ -1,11 +1,9 @@
-import WelcomeSection from "../WelcomeSection/WelcomeSection";
-import "./styles/MainPage.sass"
+import WelcomeSectionContainer from "../WelcomeSection/WelcomeSectionContainer";
 
 const MainPage = () => {
     return (
         <div className="mainDiv">
-            {/*<Filler/>*/}
-            <WelcomeSection />
+            <WelcomeSectionContainer />
         </div>
     );
 };

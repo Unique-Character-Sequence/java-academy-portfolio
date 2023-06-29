@@ -1,17 +1,14 @@
 import { useState } from "react";
+import "./styles/WelcomeSection.sass"
 import logo from "./assets/logo-txt_desktop.png";
 import hamburgerButton from "./assets/hamburgerMenuButton.png";
 import logoRetina from "./assets/logo-txt_desktop@2x.png";
 import group4 from "./assets/Group 4.png";
 import group5 from "./assets/Group 5.png";
 import Fade from "@mui/material/Fade";
+import { HamburgerModal } from '../HamburgerModal/HamburgerModal';
 
-const WelcomeSection = () => {
-  const [clicked, setClicked] = useState(true);
-  const handleClick = () => {
-    setClicked((prev) => !prev);
-    setTimeout(() => setClicked((prev) => !prev), 500);
-  };
+const WelcomeSection = props => {
   return (
     <div className="welcomeDiv">
       <div className="rectangle41" />
@@ -22,11 +19,13 @@ const WelcomeSection = () => {
         alt="logoTxt"
       />
       <img
+        onClick={props.handleClick_hamburger}
         className="hamburgerButton"
         src={hamburgerButton}
         alt="hamburgerButton"
       />
-      <Fade in={clicked}>
+      {props.clicked_hamburger && <HamburgerModal handleClick_hamburger={props.handleClick_hamburger} />}
+      <Fade in={props.clicked_SL}>
         <div className="rectangle41TextBox">
           <span className="textBig1">Становись</span>
           <div className="javaTextPosition">
@@ -60,7 +59,7 @@ const WelcomeSection = () => {
               <br />в удобное время
             </span>
           </div>
-          <button onClick={handleClick} className="buttonStartLearning">
+          <button onClick={props.handleClick_SL} className="buttonStartLearning">
             Начать учиться
           </button>
 
