@@ -3,11 +3,26 @@ import CounterPage from "./features/counter/CounterPage";
 import {Route, Routes} from "react-router-dom";
 import MainPage from "./features/MainPage/MainPage";
 import { useEffect } from 'react';
+import jwt_decode from "jwt-decode"
+declare var google: any
 
+const handleCallbackResponse = (response) => {
+    console.log("Encoded JWT ID token: " + response.credential)
+    var userObject = jwt_decode(response.credential)
+    console.log(userObject)
+}
 
 const App = () => {
     useEffect(() => {
-        /*global google*/
+        /* global google */
+        google.accounts.id.initialize({
+            client_id: "409545877450-p9q99v4knsu5phb33ghqhq7m0k051snp.apps.googleusercontent.com",
+            callback: handleCallbackResponse
+        })
+        google.accounts.id.renderButton(
+            document.getElementById("signInButton"),
+            {theme: "outline", size: "large"}
+        )
     }, [])
     return (
         <div>

@@ -30,6 +30,7 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
         src={hamburgerButton}
         alt="hamburgerButton"
       />
+      <div id="signInButton" />
       {props.clicked_hamburger && <HamburgerModal handleClick_hamburger={props.handleClick_hamburger} />}
       <Fade in={props.clicked_SL}>
         <div className="rectangle41TextBox">
