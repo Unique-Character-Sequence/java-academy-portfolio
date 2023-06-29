@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/Unique-Character-Sequence/java-academy-portfolio">
-    <img src="https://raw.githubusercontent.com/Unique-Character-Sequence/java-academy-portfolio/master/src/features/MainPage/assets/logo-txt_desktop@2x.png" alt="Logo" height="80">
+    <img src="https://raw.githubusercontent.com/Unique-Character-Sequence/java-academy-portfolio/master/src/features/WelcomeSection/assets/logo-txt_desktop@2x.png" alt="Logo" height="80">
   </a>
 
   <h3 align="center">Java Academy (Portfolio Project)</h3>
