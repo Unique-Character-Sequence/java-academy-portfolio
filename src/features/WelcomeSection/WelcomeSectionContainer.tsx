@@ -15,10 +15,10 @@ const WelcomeSectionContainer = () => {
     };
     return (
         <WelcomeSection
-            handleClick_hamburger={handleClick_hamburger}
-            handleClick_SL={handleClick_SL}
             clicked_SL={clicked_SL}
+            handleClick_SL={handleClick_SL}
             clicked_hamburger={clicked_hamburger}
+            handleClick_hamburger={handleClick_hamburger}
         />
     )
 }

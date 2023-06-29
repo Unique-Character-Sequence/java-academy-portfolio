@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./styles/WelcomeSection.sass"
 import logo from "./assets/logo-txt_desktop.png";
 import hamburgerButton from "./assets/hamburgerMenuButton.png";
@@ -8,7 +7,14 @@ import group5 from "./assets/Group 5.png";
 import Fade from "@mui/material/Fade";
 import { HamburgerModal } from '../HamburgerModal/HamburgerModal';
 
-const WelcomeSection = props => {
+type WelcomeSectionProps = {
+  clicked_SL: boolean
+  handleClick_SL: () => void
+  clicked_hamburger: boolean
+  handleClick_hamburger: () => void
+}
+
+const WelcomeSection = (props: WelcomeSectionProps) => {
   return (
     <div className="welcomeDiv">
       <div className="rectangle41" />
