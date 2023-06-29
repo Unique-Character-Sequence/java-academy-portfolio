@@ -1,0 +1,56 @@
+@import variables
+@import mixins
+@import text
+@import buttons
+
+.mainDiv
+    display: flex
+    justify-content: center
+    height: 100vh
+    align-items: center
+    font-family: 'Inter', sans-serif
+    // FIXME: Убери ужас
+    background-color: $defaultGrey
+    @media (max-width: $mobile)
+        align-items: start
+
+.frame73
+    position: relative
+    background-color: $defaultGrey
+    user-select: none
+    width: 320px
+    height: 550px
+    @media (max-width: $mobile)
+        width: 100.0000vw
+        height: 171.8750vw
+
+.logo
+    position: absolute
+    width: 108px
+    height: 65px
+    top: 39px
+    left: 106px
+    @media (max-width: $mobile)
+        width: 33.7500vw
+        height: 20.3125vw
+        top: 12.1875vw
+        left: 33.1250vw
+
+.cross
+    position: absolute
+    cursor: pointer
+    width: 22px
+    height: 22px
+    top: 23px
+    left: 267px
+    @media (max-width: $mobile)
+        width: 6.8750vw
+        height: 6.8750vw
+        top: 7.1875vw
+        left: 83.4375vw
+
+.input-button1
+    @include inputMixin(520px)
+
+.input-button2
+    @include inputMixin(580px)

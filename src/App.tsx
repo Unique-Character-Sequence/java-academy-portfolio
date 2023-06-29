@@ -2,7 +2,6 @@ import './features/counter/CounterPage.css';
 import CounterPage from "./features/counter/CounterPage";
 import {Route, Routes} from "react-router-dom";
 import MainPage from "./features/MainPage/MainPage";
-import React from 'react'
 
 
 const App = () => (

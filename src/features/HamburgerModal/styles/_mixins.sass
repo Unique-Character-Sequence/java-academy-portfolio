@@ -1,0 +1,75 @@
+@import variables
+
+@mixin textLink($top, $left)
+    position: absolute
+    cursor: pointer
+    top: $top
+    left: $left
+    font-family: Inter
+    font-size: 16px
+    font-weight: 700
+    line-height: 19px
+    letter-spacing: 0em
+    text-align: left
+    color: $defaultWhite
+
+    &:hover
+        transition: 0.15s
+        transform: scale(1.03)
+
+    @media (max-width: $mobile)
+        font-size: 5.0000vw
+        line-height: 5.9375vw
+
+@mixin buttonSetting
+
+@mixin button($top, $left)
+    cursor: pointer
+
+    position: absolute
+    border: none
+    cursor: pointer
+    background: $defaultWhite
+    width: 240px
+    height: 41px
+    top: $top
+    left: $left
+    padding: 10px 30px 10px 30px
+    border-radius: 25px
+    gap: 10px
+    font-family: Inter
+    font-size: 14px
+    font-weight: 400
+    line-height: 17px
+    letter-spacing: 0em
+    &:hover
+        transition: 0.2s
+        color: $defaultWhite
+        background: $hoverBlue
+
+    @media (max-width: $mobile)
+        font-size: 4.3750vw
+        line-height: 5.3125vw
+        width: 75.0000vw
+        height: 12.8125vw
+        padding: 3.1250vw 9.3750vw 3.1250vw 9.3750vw
+        border-radius: 7.8125vw
+        gap: 3.1250vw
+
+@mixin inputMixin($top)
+    input-button1
+    position: absolute
+    border: none
+    background: $defaultWhite
+    width: 180px
+    height: 15px
+    top: $top
+    left: 40px
+    padding: 10px 30px 10px 30px
+    border-radius: 25px
+    gap: 10px
+    font-family: Inter
+    font-size: 16px
+    font-weight: 400
+    line-height: 17px
+    letter-spacing: 0em
