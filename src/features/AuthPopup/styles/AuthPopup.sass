@@ -3,12 +3,11 @@
 .loginButton
 
 .mainDiv__AuthPopup
-  @include media("<=667px")
+  height: 440px
+  width: 667px
+  @media(max-width: 667px)
     height: 65.9670vw
     width: 100vw
-  @include media(">667px")
-    height: 440px
-    width: 667px
 
 .authModalForm
   position: absolute

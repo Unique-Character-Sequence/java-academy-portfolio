@@ -1,17 +1,20 @@
 import "./styles/WelcomeSection.sass"
-import logo from "./assets/logo-txt_desktop.png";
-import hamburgerButton from "./assets/hamburgerMenuButton.png";
-import logoRetina from "./assets/logo-txt_desktop@2x.png";
-import group4 from "./assets/Group 4.png";
-import group5 from "./assets/Group 5.png";
+import logo from "../../assets/logo-txt_desktop.png";
+import hamburgerButton from "../../assets/hamburgerMenuButton.png";
+import logoRetina from "../../assets/logo-txt_desktop@2x.png";
+import group4 from "../../assets/Group 4.png";
+import group5 from "../../assets/Group 5.png";
 import Fade from "@mui/material/Fade";
 import { HamburgerModal } from '../HamburgerModal/HamburgerModal';
+import AuthPopup from "../AuthPopup/AuthPopup";
 
 type WelcomeSectionProps = {
   clicked_SL: boolean
   handleClick_SL: () => void
   clicked_hamburger: boolean
   handleClick_hamburger: () => void
+  clicked_signIn: boolean
+  handleClick_signIn: () => void
 }
 
 const WelcomeSection = (props: WelcomeSectionProps) => {
@@ -30,7 +33,8 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
         src={hamburgerButton}
         alt="hamburgerButton"
       />
-      <div id="signInButton" />
+      {/* <div id="signInButton" /> */}
+      {props.clicked_signIn && <AuthPopup />}
       {props.clicked_hamburger && <HamburgerModal handleClick_hamburger={props.handleClick_hamburger} />}
       <Fade in={props.clicked_SL}>
         <div className="rectangle41TextBox">
@@ -76,7 +80,7 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
       </Fade>
       <div className="auth_ButtonsContainer">
         <button className="auth_Button1">
-          <span>Вход</span>
+          <span onClick={props.handleClick_signIn}>Вход</span>
         </button>
         <button className="auth_Button2">
           <span>Регистрация</span>

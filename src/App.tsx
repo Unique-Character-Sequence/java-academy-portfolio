@@ -1,34 +1,40 @@
 import './features/counter/CounterPage.css';
 import CounterPage from "./features/counter/CounterPage";
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import MainPage from "./features/MainPage/MainPage";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import jwt_decode from "jwt-decode"
 declare var google: any
 
-const handleCallbackResponse = (response) => {
-    console.log("Encoded JWT ID token: " + response.credential)
-    var userObject = jwt_decode(response.credential)
-    console.log(userObject)
-}
+
 
 const App = () => {
+    // TODO: Реализовать авторизацию с куками через гугл
+    const [user, setUser] = useState({})
     useEffect(() => {
-        /* global google */
+        
+        const handleCallbackResponse = (response) => {
+            console.log("Encoded JWT ID token: " + response.credential)
+            var userObject = jwt_decode(response.credential)
+            setUser(userObject)
+        }
+        console.log("А Я-ТО ДУМАЛ, КОГДА ЖЕ ОН ПОЯВИТСЯ: ", user)
+
         google.accounts.id.initialize({
             client_id: "409545877450-p9q99v4knsu5phb33ghqhq7m0k051snp.apps.googleusercontent.com",
             callback: handleCallbackResponse
         })
         google.accounts.id.renderButton(
             document.getElementById("signInButton"),
-            {theme: "outline", size: "large"}
+            { theme: "outline", size: "large" }
         )
-    }, [])
+    }, [user])
+    console.log("А Я ТОЖЕ ВОТ ДУМАЛ, КОГДА ЖЕ ОН ПОЯВИТСЯ: ", user)
     return (
         <div>
             <Routes>
-                <Route path="/counter" element={<CounterPage/>}/>
-                <Route path="/" element={<MainPage/>}/>
+                <Route path="/counter" element={<CounterPage />} />
+                <Route path="/" element={<MainPage />} />
             </Routes>
         </div>
     );
