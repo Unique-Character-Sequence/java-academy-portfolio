@@ -4,17 +4,16 @@
 @import buttons
 
 .mainDivBurger
-    position: absolute
-    bottom: 1px
-    z-index: 50
-    display: flex
-    justify-content: center
-    height: 100vh
-    align-items: center
-    font-family: 'Inter', sans-serif
-    // FIXME: Убери ужас
-    background-color: $defaultGrey
+    display: none
     @media (max-width: $mobile)
+        position: absolute
+        bottom: 1px
+        z-index: 50
+        display: flex
+        justify-content: center
+        height: 100vh
+        font-family: 'Inter', sans-serif
+        background-color: $defaultGrey
         align-items: start
     .frame73
         position: relative

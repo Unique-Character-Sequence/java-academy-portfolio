@@ -34,8 +34,11 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
         alt="hamburgerButton"
       />
       {/* <div id="signInButton" /> */}
-      {props.clicked_signIn && <AuthPopup />}
-      {props.clicked_hamburger && <HamburgerModal handleClick_hamburger={props.handleClick_hamburger} />}
+      <AuthPopup handleClose={props.handleClick_signIn} shouldFade={props.clicked_signIn} />
+      <HamburgerModal shouldFade={props.clicked_hamburger}
+        handleClick_signIn={props.handleClick_signIn}
+        handleClick_hamburger={props.handleClick_hamburger} />
+
       <Fade in={props.clicked_SL}>
         <div className="rectangle41TextBox">
           <span className="textBig1">Становись</span>
@@ -79,8 +82,8 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
         </div>
       </Fade>
       <div className="auth_ButtonsContainer">
-        <button className="auth_Button1">
-          <span onClick={props.handleClick_signIn}>Вход</span>
+        <button onClick={props.handleClick_signIn} className="auth_Button1">
+          <span>Вход</span>
         </button>
         <button className="auth_Button2">
           <span>Регистрация</span>

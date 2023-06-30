@@ -16,7 +16,6 @@ const WelcomeSectionContainer = () => {
     const [clicked_signIn, setClicked_signIn] = useState(false);
     const handleClick_signIn = () => {
         setClicked_signIn((prev) => !prev)
-        console.log(clicked_signIn)
     };
 
     return (
