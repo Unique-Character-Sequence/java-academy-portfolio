@@ -5,12 +5,29 @@ $mainFontFamily: 'Inter', sans-serif
 $mainBlue: #302D3D
 $mainWhite: #FFFFFF
 
+.googleAuthBtn
+  position: relative
+  display: flex
+  justify-content: center
+  top: 55%
+
+.modalSpace
+  position: fixed
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100vw
+  height: 100vh
+  z-index: 100
+  background-color: rgba(0,0,0,0.1)
+  backdrop-filter: blur(4px)
+
 .authModalForm
   position: absolute
   // left: 30vw
   font-family: $mainFontFamily
-  z-index: 100
   position: absolute
+  z-index: 100
   width: 440px
   height: 667px
   background: $mainWhite

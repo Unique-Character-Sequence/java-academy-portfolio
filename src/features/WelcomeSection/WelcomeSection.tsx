@@ -33,7 +33,6 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
         src={hamburgerButton}
         alt="hamburgerButton"
       />
-      {/* <div id="signInButton" /> */}
       <AuthPopup handleClose={props.handleClick_signIn} shouldFade={props.clicked_signIn} />
       <HamburgerModal shouldFade={props.clicked_hamburger}
         handleClick_signIn={props.handleClick_signIn}
