@@ -1,7 +1,7 @@
 <br/>
 <p align="center">
   <a href="https://github.com/Unique-Character-Sequence/java-academy-portfolio">
-    <img src="https://raw.githubusercontent.com/Unique-Character-Sequence/java-academy-portfolio/master/src/features/WelcomeSection/assets/logo-txt_desktop@2x.png" alt="Logo" height="80">
+    <img src="https://raw.githubusercontent.com/Unique-Character-Sequence/java-academy-portfolio/master/src/assets/logo-txt_desktop@2x.png" alt="Logo" height="80">
   </a>
 
   <h3 align="center">Java Academy (Portfolio Project)</h3>
@@ -28,21 +28,24 @@ Online Java Academy Project: This is an **actual commercial product** with a Fig
 
 ## Built With
 
+- ![TypeScript](https://img.shields.io/badge/-TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 - ![React](https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 - ![Redux Toolkit](https://img.shields.io/badge/-Redux_Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white)
-- ![Material UI](https://img.shields.io/badge/-Material_UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
 - ![SASS](https://img.shields.io/badge/-SASS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+- ![Material UI](https://img.shields.io/badge/-Material_UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
 
-The project is built using popular technologies and frameworks, including React, Redux Toolkit, Material UI, and SASS. These technologies enable efficient development, powerful state management, beautiful UI components, and flexible styling options.
+The project is built using popular technologies and frameworks, including **TypeScript**, **React**, **Redux Toolkit**, **SASS**, and **Material UI**. These technologies enable efficient development, powerful **state management**, beautiful UI components and **animations**, flexible **styling** options, and the benefits of **static typing** with TypeScript.
+
+The app is designed to be **fully responsive**, providing a seamless experience across various devices and screen sizes, including phones, tablets, laptops, and desktops. The responsive design ensures that users can access and interact with the app comfortably **on any device**, optimizing usability.
+
+The **clean and functional codebase** is a result of translating the Figma UI document into a fully working web application. The **attention to detail** and commitment to delivering a high-quality product are evident in the implementation.
 
 Feel free to explore the project and see how these technologies come together to create a seamless and visually appealing user experience.
 
-
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
+This is an example of how you may give instructions on setting up your project locally. 
+To get a local copy up and running, follow these simple steps:
 
 ### Creating A Pull Request
 
@@ -54,4 +57,4 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-* **Pilici Rustam** - *Unemployed* - [Pilici Rustam](https://github.com/Unique-Character-Sequence) - *Making Java Academy Front-end part entirely*
+* **Pilici Rustam** - *Unemployed* - [Pilici Rustam](https://github.com/Unique-Character-Sequence) - *Single-handedly developing the front-end of the Java Academy project*
