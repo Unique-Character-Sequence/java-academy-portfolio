@@ -1,5 +1,4 @@
-import './features/counter/CounterPage.css';
-import CounterPage from "./features/counter/CounterPage";
+import Counter from "./features/counter/Counter";
 import { Route, Routes } from "react-router-dom";
 import MainPage from "./features/MainPage/MainPage";
 import { useEffect, useState } from 'react';
@@ -12,7 +11,7 @@ const App = () => {
     // TODO: Реализовать авторизацию с куками через гугл
     const [user, setUser] = useState({})
     useEffect(() => {
-        
+
         const handleCallbackResponse = (response) => {
             console.log("Encoded JWT ID token: " + response.credential)
             var userObject = jwt_decode(response.credential)
@@ -33,7 +32,7 @@ const App = () => {
     return (
         <div>
             <Routes>
-                <Route path="/counter" element={<CounterPage />} />
+                <Route path="/counter" element={<Counter />} />
                 <Route path="/" element={<MainPage />} />
             </Routes>
         </div>
