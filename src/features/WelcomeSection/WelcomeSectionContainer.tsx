@@ -11,7 +11,6 @@ const WelcomeSectionContainer = () => {
     const [clicked_hamburger, setClicked_hamburger] = useState<boolean>(false);
     const handleClick_hamburger = (): void => {
         setClicked_hamburger((prev) => !prev)
-        console.log(clicked_hamburger)
     };
     const [clicked_signIn, setClicked_signIn] = useState<boolean>(false);
     const handleClick_signIn = (): void => {

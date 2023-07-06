@@ -6,7 +6,7 @@ import group4 from "../../assets/Group 4.png";
 import group5 from "../../assets/Group 5.png";
 import Fade from "@mui/material/Fade";
 import { HamburgerModal } from '../HamburgerModal/HamburgerModal';
-import AuthPopup from "../AuthPopup/AuthPopup";
+import AuthPopupContainer from "../AuthPopup/AuthPopupContainer";
 
 type WelcomeSectionProps = {
   clicked_SL: boolean
@@ -33,11 +33,10 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
         src={hamburgerButton}
         alt="hamburgerButton"
       />
-      <AuthPopup handleClose={props.handleClick_signIn} shouldFade={props.clicked_signIn} />
+      <AuthPopupContainer handleClose={props.handleClick_signIn} shouldFade={props.clicked_signIn} />
       <HamburgerModal shouldFade={props.clicked_hamburger}
         handleClick_signIn={props.handleClick_signIn}
         handleClick_hamburger={props.handleClick_hamburger} />
-
       <Fade in={props.clicked_SL}>
         <div className="rectangle41TextBox">
           <span className="textBig1">Становись</span>
@@ -75,7 +74,6 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
           <button onClick={props.handleClick_SL} className="buttonStartLearning">
             Начать учиться
           </button>
-
           <div className="ellipse5" />
           <div className="ellipse4" />
         </div>
@@ -88,7 +86,6 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
           <span>Регистрация</span>
         </button>
       </div>
-      <div></div>
     </div>
   );
 };
