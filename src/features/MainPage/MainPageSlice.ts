@@ -28,25 +28,31 @@ const initialState: MainPageState = {
   error: null,
 };
 
-const BASE_URL: string = "https://social-network.samuraijs.com/api/1.0";
+const BASE_URL: string = "https://api.restful-api.dev/objects";
 
 export const submitSignIn = createAsyncThunk(
   "MainPageSlice/submitSignIn",
-  async ({ email, password }: { email: string; password: string }, thunkAPI) => {
+  async (
+    { email, password }: { email: string; password: string },
+    thunkAPI
+  ) => {
     thunkAPI.dispatch(setPendingSignIn(true));
     try {
       // ЭТО НЕ GOOGLE SIGN IN, ИМЕЙ ВВИДУ
-      const response = await axios.post(`${BASE_URL}/auth/login`, { email, password });
-      if (response.data.resultCode === 1 || response.data.resultCode === 10) {
-        thunkAPI.dispatch(setError(response.data.messages[0]))
-      }
-      if (response.data.resultCode === 0) {
-        thunkAPI.dispatch(setUser({email, login:email, picture_url: null, loggedIn: true}))
-        thunkAPI.dispatch(setShouldFade(false))
-        thunkAPI.dispatch(setError(null))
+      const response = await axios.post(BASE_URL, {
+        data: { email, password },
+      });
+      if (response.status === 200) {
+        thunkAPI.dispatch(
+          setUser({ email, login: email, picture_url: null, loggedIn: true })
+        );
+        thunkAPI.dispatch(setShouldFade(false));
+        thunkAPI.dispatch(setError(null));
+      } else {
+        thunkAPI.dispatch(setError(response.statusText));
       }
     } catch (error) {
-      thunkAPI.dispatch(setError(error.message))
+      thunkAPI.dispatch(setError(error.message));
     } finally {
       thunkAPI.dispatch(setPendingSignIn(false));
     }
