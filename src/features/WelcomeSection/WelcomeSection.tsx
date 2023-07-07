@@ -7,13 +7,14 @@ import group5 from "../../assets/Group 5.png";
 import Fade from "@mui/material/Fade";
 import { HamburgerModal } from '../HamburgerModal/HamburgerModal';
 import AuthPopupContainer from "../AuthPopup/AuthPopupContainer";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 type WelcomeSectionProps = {
   clicked_SL: boolean
   handleClick_SL: () => void
   clicked_hamburger: boolean
   handleClick_hamburger: () => void
-  clicked_signIn: boolean
   handleClick_signIn: () => void
 }
 
@@ -33,7 +34,8 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
         src={hamburgerButton}
         alt="hamburgerButton"
       />
-      <AuthPopupContainer handleClose={props.handleClick_signIn} shouldFade={props.clicked_signIn} />
+      <AuthPopupContainer />
+      <ToastContainer />
       <HamburgerModal shouldFade={props.clicked_hamburger}
         handleClick_signIn={props.handleClick_signIn}
         handleClick_hamburger={props.handleClick_hamburger} />

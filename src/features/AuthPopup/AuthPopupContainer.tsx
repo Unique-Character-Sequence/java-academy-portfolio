@@ -1,25 +1,23 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./styles/AuthPopup.sass"
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { setError, setUser, submitSignIn } from "../MainPage/MainPageSlice";
+import { submitSignIn } from "../MainPage/MainPageSlice";
 import AuthPopup from "./AuthPopup";
+import { setShouldFade } from "./AuthPopupSlice";
+import { toast } from "react-toastify";
 
-type AuthPopupContainerProps = {
-    handleClose: () => void;
-    shouldFade: boolean;
-}
-
-const AuthPopupContainer = (props: AuthPopupContainerProps) => {
+const AuthPopupContainer = () => {
     const modalRef = useRef<HTMLDivElement | null>(null)
     const emailRef = useRef<HTMLInputElement | null>(null)
     const passwordRef = useRef<HTMLInputElement | null>(null)
     const dispatch = useAppDispatch()
     const errorSelector = useAppSelector((state) => state.mainPage.error)
     const userSelector = useAppSelector((state) => state.mainPage.user)
+    const shouldFade = useAppSelector((state) => state.authPopup.shouldFade)
 
     const handleClickOutside = (event: MouseEvent) => {
-        if (props.shouldFade && modalRef.current && !modalRef.current.contains(event.target as Node)) {
-            props.handleClose();
+        if (shouldFade && modalRef.current && !modalRef.current.contains(event.target as Node)) {
+            dispatch(setShouldFade(false))
         }
     };
 
@@ -32,19 +30,22 @@ const AuthPopupContainer = (props: AuthPopupContainerProps) => {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [props.shouldFade])
+    }, [shouldFade])
 
     useEffect(() => {
-        if (!!errorSelector === true) {
-            alert(`[useEffect Redux] state.mainPage.error is: \n\n${errorSelector}`)
+        if (!!userSelector && userSelector.email && !errorSelector) {
+            toast.success(`You have successfully logged in as ${userSelector.email}`)
         }
-    }, [errorSelector])
+        if (!!errorSelector ) {
+            toast.warn(`${errorSelector}`)
+        }
+    }, [userSelector, errorSelector])
 
     //TODO: React Formik для работы с формами
     return (
         <AuthPopup
             handleSubmit={handleSubmit}
-            shouldFade={props.shouldFade}
+            shouldFade={shouldFade}
             modalRef={modalRef}
             emailRef={emailRef}
             passwordRef={passwordRef}

@@ -1,7 +1,10 @@
 import { useState } from "react";
 import WelcomeSection from "./WelcomeSection";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { setShouldFade } from "../AuthPopup/AuthPopupSlice";
 
 const WelcomeSectionContainer = () => {
+    const dispatch = useAppDispatch()
 
     const [clicked_SL, setClicked_SL] = useState<boolean>(true);
     const handleClick_SL = (): void => {
@@ -12,10 +15,8 @@ const WelcomeSectionContainer = () => {
     const handleClick_hamburger = (): void => {
         setClicked_hamburger((prev) => !prev)
     };
-    const [clicked_signIn, setClicked_signIn] = useState<boolean>(false);
-    const handleClick_signIn = (): void => {
-        setClicked_signIn((prev) => !prev)
-    };
+
+    const handleClick_signIn = () => { dispatch(setShouldFade(true)) }
 
     return (
         <WelcomeSection
@@ -23,7 +24,6 @@ const WelcomeSectionContainer = () => {
             handleClick_SL={handleClick_SL}
             clicked_hamburger={clicked_hamburger}
             handleClick_hamburger={handleClick_hamburger}
-            clicked_signIn={clicked_signIn}
             handleClick_signIn={handleClick_signIn}
         />
     )
