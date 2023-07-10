@@ -3,6 +3,8 @@
 @import buttons
 @import vars
 @import clickableSpans
+@import spans
+@import inputFields
 
 .modalSpace
   position: fixed
@@ -29,34 +31,10 @@
     width: 100.0000vw
     height: 100vh
 
-.topBigSpan
-  position: absolute
-  top: 189px
-  width: 100%
+.testCredentialsSpanContainer
   display: flex
+  width: 100%
   justify-content: center
-  color: $mainBlue
-  font-size: 24px
-  font-weight: 600
-  letter-spacing: -0.02em
-  @media (max-width: 440px)
-    top: 42.9545vw
-    font-size: 5.4545vw
-
-.havePasswordSpan
-  position: absolute
-  font-family: Inter
-  font-size: 12px
-  font-weight: 400
-  line-height: 15px
-  letter-spacing: 0em
-  top: 495px
-  left: 145px
-  @media (max-width: 440px)
-    font-size: 2.7273vw
-    line-height: 3.4091vw
-    top: 112.5000vw
-    left: 32.9545vw
 
 .logoImg
   position: absolute
@@ -69,34 +47,3 @@
     height: 17.5000vw
     top: 11.1364vw
     left: 35.4545vw
-
-.inputField_1
-  @include inputField ($top: 246px)
-  @media (max-width: 440px)
-    @include inputField ($top: 55.9091vw)
-
-.inputField_2
-  @include inputField ($top: 302px)
-  @media (max-width: 440px)
-    @include inputField ($top: 68.6364vw)
-
-.inputField_3
-  @include inputField ($top: 358px)
-  @media (max-width: 440px)
-    @include inputField ($top: 81.3636vw)
-
-.inputField_4
-  @include inputField ($top: 414px)
-  @media (max-width: 440px)
-    @include inputField ($top: 94.0909vw)
-
-// .inputField_5
-//   @include inputField ($top: 302px)
-//   @media (max-width: 440px)
-//     @include inputField ($top: 68.6364vw)
-
-.testCredentialsSpan1
-  @include testCredentialsSpan(435px)
-  @media (max-width: 440px)
-    top: 98.86vw
-    font-size: 2.7273vw
