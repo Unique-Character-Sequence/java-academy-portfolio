@@ -1,6 +1,7 @@
 type AuthPopupProps = {
-    handleSubmit: (email: string, password: string) => void;
-    modalRef: React.RefObject<HTMLDivElement>;
+    handleSubmit: () => void;
+    handleForgotPasswordClick: () => void;
+    handleRegisterClick: () => void;
     emailRef: React.RefObject<HTMLInputElement>;
     passwordRef: React.RefObject<HTMLInputElement>;
 }
@@ -16,19 +17,23 @@ const AuthPopup = (props: AuthPopupProps) => {
         <>
             <div id="signInButton" className="googleAuthBtn" />
             <div className="signIn_frame" />
-            <span className="spanSignInWord">Вход</span>
-            <input className="inputField_email" ref={props.emailRef} name="email" type="text" placeholder="Ваш email" />
-            <input className="inputField_password" ref={props.passwordRef} name="password" type="password" placeholder="Пароль" />
+            <span className="topBigSpan">Вход</span>
+            <input className="inputField_1" ref={props.emailRef} name="email" type="text" placeholder="Ваш email" />
+            <input className="inputField_2" ref={props.passwordRef} name="password" type="password" placeholder="Пароль" />
             <div className="testCredentialsSpanContainer">
                 <span className="testCredentialsSpan1">Test Credentials:</span>
                 <span className="testCredentialsSpan2"
                     onClick={handleTestCredentialsClick}>
                     pihole8194@tinydef.com:AyWxJiR7nqUULCh</span>
             </div>
-            <span className="forgotPassword">Забыли пароль?</span>
-            <span className="registerButton">Регистрация</span>
+            <span className="forgotPassword"
+                onClick={props.handleForgotPasswordClick}>
+                Забыли пароль?</span>
+            <span className="registerSpan"
+                onClick={props.handleRegisterClick}>
+                Регистрация</span>
             <button className="signInButton"
-                onClick={() => props.handleSubmit(props.emailRef.current.value, props.passwordRef.current.value)}>
+                onClick={props.handleSubmit}>
                 Войти</button>
         </>
     );

@@ -1,0 +1,52 @@
+.testCredentialsSpan2
+  @include testCredentialsSpan(455px)
+  cursor: pointer
+  text-decoration: underline
+  @media (max-width: 440px)
+    top: 103.41vw
+    font-size: 2.7273vw
+
+.forgotPassword
+  position: absolute
+  cursor: pointer
+  top: 495px
+  left: 95px
+  color: $mainBlue
+  font-size: 12px
+  font-weight: 400
+  text-decoration-line: underline
+  @media (max-width: 440px)
+    top: 112.5000vw
+    left: 21.5909vw
+    font-size: 2.7273vw
+
+
+@mixin switchWindowTypeSpan ($top, $left)
+  position: absolute
+  cursor: pointer
+  top: $top
+  left: $left
+  color: $mainBlue
+  animation-timing-function: ease-out
+  animation-duration: 300ms
+  font-size: 12px
+  font-weight: 600
+  letter-spacing: 0em
+  text-decoration-line: underline
+
+
+.signInSpan
+  @include switchWindowTypeSpan (495px, 259px)
+  @media (max-width: 440px)
+    @include switchWindowTypeSpan (112.5000vw, 58.8636vw)
+    top: 112.5000vw
+    left: 60.6818vw
+    font-size: 2.7273vw
+
+.registerSpan
+  @include switchWindowTypeSpan (495px, 267px)
+  @media (max-width: 440px)
+    @include switchWindowTypeSpan (112.5000vw, 60.6818vw)
+    top: 112.5000vw
+    left: 60.6818vw
+    font-size: 2.7273vw

@@ -1,0 +1,47 @@
+@import vars
+
+.signInButton
+  position: absolute
+  top: 556px
+  left: 95px
+  color: $mainWhite
+  display: flex
+  width: 250px
+  height: 48px
+  padding: 10px 20px
+  justify-content: center
+  align-items: center
+  border-radius: 5px
+  border: none
+  gap: 10px
+  cursor: pointer
+  background: $mainRed
+  font-family: Inter
+  font-size: 14px
+  font-weight: 600
+  line-height: 17px
+  letter-spacing: 0em
+  &:hover
+    background: #DA3739
+    transition: 0.15s
+
+  @media (max-width: 440px)
+    top: 126.3636vw
+    left: 21.5909vw
+    width: 56.8182vw
+    height: 10.9091vw
+    padding: 2.2727vw 4.5455vw
+    border-radius: 1.1364vw
+    gap: 2.2727vw
+    font-size: 3.1818vw
+    line-height: 3.8636vw
+
+.googleAuthBtn
+  position: relative
+  display: flex
+  justify-content: center
+  top: 55%
+  @media (max-width: 440px)
+    top: 85vw
+  @media (max-width: 344px)
+    display: none

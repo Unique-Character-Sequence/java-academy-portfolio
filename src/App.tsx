@@ -16,6 +16,8 @@ const App = () => {
 
     const userSelector = useAppSelector((state) => state.mainPage.user)
     const shouldFade = useAppSelector((state) => state.modalPopup.shouldFade)
+    const windowType = useAppSelector((state) => state.modalPopup.windowType)
+    const isWindowTypeSignIn = windowType === "SignIn"
 
     useEffect(() => {
         dispatch(setShouldFade(false))
@@ -37,7 +39,7 @@ const App = () => {
             document.getElementById("signInButton"),
             { theme: "outline", size: "large" }
         )
-    }, [shouldFade])
+    }, [shouldFade, isWindowTypeSignIn])
 
     return (
         <div>

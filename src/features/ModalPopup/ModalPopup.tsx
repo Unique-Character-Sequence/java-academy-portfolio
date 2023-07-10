@@ -4,8 +4,9 @@ import "./styles/ModalPopup.sass"
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { setShouldFade } from "./ModalPopupSlice";
 import { toast } from "react-toastify";
-import AuthPopupContainer from "../AuthPopup/AuthPopupContainer";
+import AuthFormContainer from "../AuthForm/AuthFormContainer";
 import logo from "../../assets/logo-txt-gray.png"
+import RegisterFormContainer from "../RegisterForm/RegisterFormContainer";
 
 const ModalPopup = () => {
     // Local variables
@@ -44,9 +45,9 @@ const ModalPopup = () => {
     const componentRendered = () => {
         switch (windowType) {
             case "SignIn":
-                return <AuthPopupContainer />
+                return <AuthFormContainer />
             case "SignUp":
-                return <div>Sign Up!</div>
+                return <RegisterFormContainer />
             case "ForgotPassword":
                 return <div>Forgot Password!</div>
         }

@@ -1,0 +1,33 @@
+@mixin inputField ($top)
+  position: absolute
+  width: 250px
+  height: 14px // Странно работает, но ладно
+  top: $top
+  left: 95px
+  padding: 10px
+  font-family: $mainFontFamily
+  font-size: 13px
+  border-radius: 5px
+  border: 1px solid #EFEEEE
+  &:focus
+    outline: none
+  @media (max-width: 440px)
+    width: 56.8182vw
+    font-size: 2.9545vw
+    height: 3.1818vw
+    left: 21.5909vw
+    padding: 2.2727vw
+    border-radius: 1.1364vw
+
+
+@mixin testCredentialsSpan ($top)
+  position: absolute
+  top: $top
+  font-size: 12px
+  @media (max-width: 440px)
+    font-size: 2.7273vw
+
+.testCredentialsSpanContainer
+  display: flex
+  width: 100%
+  justify-content: center
