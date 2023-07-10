@@ -21,7 +21,7 @@ const App = () => {
 
     useEffect(() => {
         dispatch(setShouldFade(false))
-    }, [userSelector])
+    }, [dispatch, userSelector])
 
     useEffect(() => {
         const handleCallbackResponse = (response) => {
@@ -39,7 +39,7 @@ const App = () => {
             document.getElementById("signInButton"),
             { theme: "outline", size: "large" }
         )
-    }, [shouldFade, isWindowTypeSignIn])
+    }, [shouldFade, isWindowTypeSignIn, dispatch])
 
     return (
         <div>

@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { useAppDispatch } from "../../app/hooks";
-import { submitSignIn } from "../MainPage/MainPageSlice";
 import AuthForm from "./AuthForm";
 import { setWindowType } from "../ModalPopup/ModalPopupSlice";
+import { submitSignIn } from "../MainPage/sumbitSignInThunk";
 
 const AuthFormContainer = () => {
     const emailRef = useRef<HTMLInputElement | null>(null)

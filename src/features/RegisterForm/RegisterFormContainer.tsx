@@ -11,6 +11,12 @@ const RegisterFormContainer = () => {
     const dispatch = useAppDispatch()
 
     const handleSubmit = () => {
+        // dispatch(submitRegisterForm({
+        //     email: emailRef.current.value,
+        //     name: nameRef.current.value,
+        //     password: passwordRef.current.value,
+        //     repeatPassword: repeatPasswordRef.current.value
+        // }))
         alert("in development")
     }
     const handleSignIn = () => {
