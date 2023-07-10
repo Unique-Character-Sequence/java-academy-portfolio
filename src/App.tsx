@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import jwt_decode from "jwt-decode"
 import { useAppDispatch, useAppSelector } from "./app/hooks";
 import { setError, setUser } from "./features/MainPage/MainPageSlice";
-import { setShouldFade } from "./features/AuthPopup/AuthPopupSlice";
+import { setShouldFade } from "./features/ModalPopup/ModalPopupSlice";
 declare var google: any
 
 
@@ -15,9 +15,12 @@ const App = () => {
     const dispatch = useAppDispatch()
 
     const userSelector = useAppSelector((state) => state.mainPage.user)
+    const shouldFade = useAppSelector((state) => state.modalPopup.shouldFade)
+
     useEffect(() => {
         dispatch(setShouldFade(false))
     }, [userSelector])
+
     useEffect(() => {
         const handleCallbackResponse = (response) => {
             // Google Auth dispatched to redux
@@ -34,7 +37,7 @@ const App = () => {
             document.getElementById("signInButton"),
             { theme: "outline", size: "large" }
         )
-    }, [])
+    }, [shouldFade])
 
     return (
         <div>

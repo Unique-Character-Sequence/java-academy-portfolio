@@ -1,14 +1,12 @@
 import { Action, ThunkAction, configureStore } from "@reduxjs/toolkit";
 import counterReducer from "../features/counter/counterSlice";
 import mainPageReducer from "./../features/MainPage/MainPageSlice";
-import authPopupReducer from "./../features/AuthPopup/AuthPopupSlice";
 import modalPopupReducer from "./../features/ModalPopup/ModalPopupSlice";
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
     mainPage: mainPageReducer,
-    authPopup: authPopupReducer,
     modalPopup: modalPopupReducer,
   },
 });
