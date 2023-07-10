@@ -1,6 +1,6 @@
 import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { setShouldFade } from "../AuthPopup/AuthPopupSlice";
+import { setShouldFade } from "../ModalPopup/ModalPopupSlice";
 
 type strOrNull = string | null;
 

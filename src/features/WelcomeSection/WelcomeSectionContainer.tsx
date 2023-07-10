@@ -1,7 +1,7 @@
 import { useState } from "react";
 import WelcomeSection from "./WelcomeSection";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import { setShouldFade } from "../AuthPopup/AuthPopupSlice";
+import { useAppDispatch } from "../../app/hooks";
+import { setShouldFade, setWindowType } from "../ModalPopup/ModalPopupSlice";
 
 const WelcomeSectionContainer = () => {
     const dispatch = useAppDispatch()
@@ -16,7 +16,15 @@ const WelcomeSectionContainer = () => {
         setClicked_hamburger((prev) => !prev)
     };
 
-    const handleClick_signIn = () => { dispatch(setShouldFade(true)) }
+    const handleClick_signIn = () => { 
+        dispatch(setShouldFade(true)) 
+        dispatch(setWindowType("SignIn"))
+    }
+
+    const handleClick_signUp = () => { 
+        dispatch(setShouldFade(true)) 
+        dispatch(setWindowType("SignUp"))
+    }
 
     return (
         <WelcomeSection
@@ -25,6 +33,7 @@ const WelcomeSectionContainer = () => {
             clicked_hamburger={clicked_hamburger}
             handleClick_hamburger={handleClick_hamburger}
             handleClick_signIn={handleClick_signIn}
+            handleClick_signUp={handleClick_signUp}
         />
     )
 }

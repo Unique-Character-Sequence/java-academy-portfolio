@@ -1,7 +1,7 @@
 import Counter from "./features/counter/Counter";
 import { Route, Routes } from "react-router-dom";
 import MainPage from "./features/MainPage/MainPage";
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import jwt_decode from "jwt-decode"
 import { useAppDispatch, useAppSelector } from "./app/hooks";
 import { setError, setUser } from "./features/MainPage/MainPageSlice";
