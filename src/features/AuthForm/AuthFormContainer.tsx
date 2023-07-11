@@ -1,16 +1,14 @@
-import { useRef } from "react";
 import { useAppDispatch } from "../../app/hooks";
 import AuthForm from "./AuthForm";
 import { setWindowType } from "../ModalPopup/ModalPopupSlice";
 import { submitSignIn } from "../MainPage/sumbitSignInThunk";
+import { signInSchema } from "./signInSchema";
 
 const AuthFormContainer = () => {
-    const emailRef = useRef<HTMLInputElement | null>(null)
-    const passwordRef = useRef<HTMLInputElement | null>(null)
     const dispatch = useAppDispatch()
 
-    const handleSubmit = () => {
-        dispatch(submitSignIn({ email: emailRef.current.value, password: passwordRef.current.value }))
+    const handleSubmit = (email: string, password:string) => {
+        dispatch(submitSignIn({ email, password }))
     }
     const handleRegisterClick = () => {
         dispatch(setWindowType("SignUp"))
@@ -22,11 +20,10 @@ const AuthFormContainer = () => {
     //TODO: React Formik для работы с формами
     return (
         <AuthForm
+            signInSchema={signInSchema}
             handleSubmit={handleSubmit}
             handleRegisterClick={handleRegisterClick}
             handleForgotPasswordClick={handleForgotPasswordClick}
-            emailRef={emailRef}
-            passwordRef={passwordRef}
         />
     );
 };

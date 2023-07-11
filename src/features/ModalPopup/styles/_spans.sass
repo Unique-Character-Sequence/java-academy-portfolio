@@ -1,3 +1,5 @@
+@import vars
+
 .havePasswordSpan
   position: absolute
   font-family: Inter
@@ -12,7 +14,6 @@
     line-height: 3.4091vw
     top: 112.5000vw
     left: 32.9545vw
-
 
 .topBigSpan
   position: absolute
@@ -33,3 +34,23 @@
   @media (max-width: 440px)
     top: 98.86vw
     font-size: 2.7273vw
+
+.errorMessage_inputField_1
+  @include errorMessage_inputField(282px)
+  @media (max-width: 440px)
+    @include errorMessage_inputField(64.0909vw)
+
+.errorMessage_inputField_2
+  @include errorMessage_inputField(338px)
+  @media (max-width: 440px)
+    @include errorMessage_inputField(76.8182vw)
+
+.errorMessage_inputField_3
+  @include errorMessage_inputField(394px)
+  @media (max-width: 440px)
+    @include errorMessage_inputField(89.5455vw)
+
+.errorMessage_inputField_4
+  @include errorMessage_inputField(450px)
+  @media (max-width: 440px)
+    @include errorMessage_inputField(102.2727vw)

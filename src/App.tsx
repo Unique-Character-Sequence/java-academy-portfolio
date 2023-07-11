@@ -36,7 +36,7 @@ const App = () => {
             callback: handleCallbackResponse
         })
         google.accounts.id.renderButton(
-            document.getElementById("signInButton"),
+            document.getElementById("signInWithGoogleBtn"),
             { theme: "outline", size: "large" }
         )
     }, [shouldFade, isWindowTypeSignIn, dispatch])

@@ -1,40 +1,53 @@
+import { Field, Form, Formik } from "formik";
+import * as Yup from "yup";
+import { signInSchemaType, signInValues } from "./signInSchema";
+
 type AuthPopupProps = {
-    handleSubmit: () => void;
+    handleSubmit: (email: string, password: string) => void;
     handleForgotPasswordClick: () => void;
     handleRegisterClick: () => void;
-    emailRef: React.RefObject<HTMLInputElement>;
-    passwordRef: React.RefObject<HTMLInputElement>;
+    signInSchema: Yup.ObjectSchema<signInSchemaType>
 }
 
 const AuthPopup = (props: AuthPopupProps) => {
-    const handleTestCredentialsClick = () => {
-        props.emailRef.current.value = "pihole8194@tinydef.com";
-        props.passwordRef.current.value = "AyWxJiR7nqUULCh";
-
-    };
     //TODO: React Formik для работы с формами
     return (
         <>
-            <div id="signInButton" className="googleAuthBtn" />
-            <div className="signIn_frame" />
+            <div id="signInWithGoogleBtn" className="googleAuthBtn" />
             <span className="topBigSpan">Вход</span>
-            <input className="inputField_1" ref={props.emailRef} name="email" type="text" placeholder="Ваш email" />
-            <input className="inputField_2" ref={props.passwordRef} name="password" type="password" placeholder="Пароль" />
-            <div className="testCredentialsSpanContainer">
-                <span className="testCredentialsSpan1">Test Credentials:</span>
-                <span className="testCredentialsSpan2"
-                    onClick={handleTestCredentialsClick}>
-                    pihole8194@tinydef.com:AyWxJiR7nqUULCh</span>
-            </div>
+            <Formik
+                initialValues={{ email: '', password: '' }}
+                validationSchema={props.signInSchema}
+                onSubmit={(values: signInValues) => {
+                    console.log(values)
+                    props.handleSubmit(values.email, values.password)
+                }}
+            >
+                {(props) => {
+                    const { values, touched, errors } = props
+                    return (
+                        <Form>
+                            <Field
+                                className="inputField_1" name="email" type="text" placeholder="Ваш email" />
+                            <span className="errorMessage_inputField_1">
+                                {errors.email && touched.email ? errors.email : ""}
+                            </span>
+                            <Field
+                                className="inputField_2" name="password" type="password" placeholder="Пароль" />
+                            <span className="errorMessage_inputField_2">
+                                {errors.password && touched.password ? errors.password : ""}
+                            </span>
+                            <button className="signInButton" type="submit">Войти</button>
+                        </Form>
+                    )
+                }}
+            </Formik>
             <span className="forgotPassword"
                 onClick={props.handleForgotPasswordClick}>
                 Забыли пароль?</span>
             <span className="registerSpan"
                 onClick={props.handleRegisterClick}>
                 Регистрация</span>
-            <button className="signInButton"
-                onClick={props.handleSubmit}>
-                Войти</button>
         </>
     );
 };

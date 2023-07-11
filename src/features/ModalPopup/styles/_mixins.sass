@@ -1,7 +1,8 @@
 @mixin inputField ($top)
   position: absolute
+  box-sizing: border-box // иначе странно считает высоту
   width: 250px
-  height: 14px // Странно работает, но ладно
+  height: 36px
   top: $top
   left: 95px
   padding: 10px
@@ -14,11 +15,10 @@
   @media (max-width: 440px)
     width: 56.8182vw
     font-size: 2.9545vw
-    height: 3.1818vw
+    height: 8.1818vw
     left: 21.5909vw
     padding: 2.2727vw
     border-radius: 1.1364vw
-
 
 @mixin testCredentialsSpan ($top)
   position: absolute
@@ -39,3 +39,17 @@
   font-weight: 600
   letter-spacing: 0em
   text-decoration-line: underline
+
+@mixin errorMessage_inputField($top)
+  position: absolute
+  top: $top
+  right: 95px
+  font-size: 11px
+  font-weight: 400
+  line-height: 13px
+  letter-spacing: 0em
+  color: $mainRed
+  @media (max-width: 440px)
+    right: 21.5909vw
+    font-size: 2.5000vw
+    line-height: 2.9545vw
