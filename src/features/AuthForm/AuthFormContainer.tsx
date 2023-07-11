@@ -1,7 +1,7 @@
 import { useAppDispatch } from "../../app/hooks";
 import AuthForm from "./AuthForm";
 import { setWindowType } from "../ModalPopup/ModalPopupSlice";
-import { submitSignIn } from "../MainPage/sumbitSignInThunk";
+import { submitSignIn } from "./sumbitSignInThunk";
 import { signInSchema } from "./signInSchema";
 
 const AuthFormContainer = () => {

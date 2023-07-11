@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { setError, setPendingSignIn, setUser } from "./MainPageSlice";
+import { setError, setPendingSignIn, setUser } from "../MainPage/MainPageSlice";
 import axios from "axios";
 import { setShouldFade } from "../ModalPopup/ModalPopupSlice";
 
