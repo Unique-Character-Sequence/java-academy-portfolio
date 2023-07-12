@@ -1,8 +1,8 @@
 @import vars
 
-.signInButton
+@mixin redButton ($top)
   position: absolute
-  top: 556px
+  top: $top
   left: 95px
   color: $mainWhite
   display: flex
@@ -26,7 +26,6 @@
     transition: 0.15s
 
   @media (max-width: 440px)
-    top: 126.3636vw
     left: 21.5909vw
     width: 56.8182vw
     height: 10.9091vw
@@ -35,6 +34,16 @@
     gap: 2.2727vw
     font-size: 3.1818vw
     line-height: 3.8636vw
+
+.signInButton
+  @include redButton ($top: 556px)
+  @media (max-width: 440px)
+    @include redButton ($top: 126.3636vw)
+
+.forgotPasswordButton
+  @include redButton ($top: 392px)
+  @media (max-width: 440px)
+    @include redButton ($top: 89.0909vw)
 
 .googleAuthBtn
   position: relative

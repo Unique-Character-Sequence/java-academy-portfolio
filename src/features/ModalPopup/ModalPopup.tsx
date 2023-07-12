@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import AuthFormContainer from "../AuthForm/AuthFormContainer";
 import logo from "../../assets/logo-txt-gray.png"
 import RegisterFormContainer from "../RegisterForm/RegisterFormContainer";
+import ForgotPasswordFormContainer from "../ForgotPasswordForm/ForgotPasswordFormContainer";
 
 const ModalPopup = () => {
     // Local variables
@@ -17,6 +18,7 @@ const ModalPopup = () => {
     const errorSelector = useAppSelector((state) => state.mainPage.error)
     const userSelector = useAppSelector((state) => state.mainPage.user)
     const didRegisterSelector = useAppSelector((state) => state.mainPage.didRegister)
+    const didRequestPasswordRecovery = useAppSelector((state) => state.mainPage.didRequestPasswordRecovery)
     const dispatch = useAppDispatch()
 
     useEffect(() => {
@@ -38,13 +40,16 @@ const ModalPopup = () => {
         if (!!userSelector && userSelector.email && !errorSelector && !didRegisterSelector ) {
             toast.success(`You have successfully logged in as ${userSelector.email}`)
         }
+        if (!errorSelector && !!didRequestPasswordRecovery ) {
+            toast.success(`You have sent recovery request as ${didRequestPasswordRecovery}`)
+        }
         if (!!userSelector && userSelector.email && !errorSelector && didRegisterSelector ) {
             toast.success(`You have successfully registered as ${userSelector.login}`)
         }
         if (!!errorSelector) {
             toast.warn(`${errorSelector}`)
         }
-    }, [userSelector, didRegisterSelector, errorSelector])
+    }, [userSelector, didRequestPasswordRecovery, didRegisterSelector, errorSelector])
 
     const componentRendered = () => {
         switch (windowType) {
@@ -53,7 +58,7 @@ const ModalPopup = () => {
             case "SignUp":
                 return <RegisterFormContainer />
             case "ForgotPassword":
-                return <div>Forgot Password!</div>
+                return <ForgotPasswordFormContainer />
         }
     }
 

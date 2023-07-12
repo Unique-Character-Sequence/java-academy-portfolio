@@ -17,6 +17,7 @@ export interface MainPageState {
   didRegister: boolean;
   pendingSignIn: boolean;
   pendingSignUp: boolean;
+  didRequestPasswordRecovery: strOrNull;
   user: UserInterface | null;
   error: strOrNull;
 }
@@ -26,6 +27,7 @@ const initialState: MainPageState = {
   didRegister: false,
   pendingSignIn: false,
   pendingSignUp: false,
+  didRequestPasswordRecovery: null,
   user: null,
   error: null,
 };
@@ -50,6 +52,9 @@ export const MainPageSlice = createSlice({
     setUserDidRegister: (state, action: PayloadAction<boolean>) => {
       state.didRegister = action.payload;
     },
+    setDidRequestPasswordRecovery: (state, action: PayloadAction<strOrNull>) => {
+      state.didRequestPasswordRecovery = action.payload;
+    },
   },
 });
 
@@ -59,6 +64,7 @@ export const {
   setPendingSignIn,
   setPendingSignUp,
   setUserDidRegister,
+  setDidRequestPasswordRecovery,
 } = MainPageSlice.actions;
 
 export default MainPageSlice.reducer;
