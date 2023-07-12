@@ -14,14 +14,18 @@ interface UserInterfaceAction extends UserInterface {
 
 export interface MainPageState {
   loggedIn: boolean;
+  didRegister: boolean;
   pendingSignIn: boolean;
+  pendingSignUp: boolean;
   user: UserInterface | null;
   error: strOrNull;
 }
 
 const initialState: MainPageState = {
   loggedIn: false,
+  didRegister: false,
   pendingSignIn: false,
+  pendingSignUp: false,
   user: null,
   error: null,
 };
@@ -40,9 +44,21 @@ export const MainPageSlice = createSlice({
     setPendingSignIn: (state, action: PayloadAction<boolean>) => {
       state.pendingSignIn = action.payload;
     },
+    setPendingSignUp: (state, action: PayloadAction<boolean>) => {
+      state.pendingSignUp = action.payload;
+    },
+    setUserDidRegister: (state, action: PayloadAction<boolean>) => {
+      state.didRegister = action.payload;
+    },
   },
 });
 
-export const { setUser, setError, setPendingSignIn } = MainPageSlice.actions;
+export const {
+  setUser,
+  setError,
+  setPendingSignIn,
+  setPendingSignUp,
+  setUserDidRegister,
+} = MainPageSlice.actions;
 
 export default MainPageSlice.reducer;

@@ -1,32 +1,64 @@
+import { Field, Form, Formik } from "formik";
+import { signUpSchemaType, signUpValues } from "./signUpSchema";
+import { ObjectSchema } from "yup";
+
 interface RegisterFormProps {
-    handleSubmit: () => void;
+    signUpSchema: ObjectSchema<signUpSchemaType>
+    handleSubmit: (email: string, name: string, password: string) => void;
     handleSignIn: () => void;
-    emailRef: React.RefObject<HTMLInputElement>;
-    nameRef: React.RefObject<HTMLInputElement>;
-    passwordRef: React.RefObject<HTMLInputElement>;
-    repeatPasswordRef: React.RefObject<HTMLInputElement>;
 }
 
+const ErrorMessage = ({ field, classN, errors, touched }: any) => {
+    return (
+        <span className={classN}>
+            {errors[field] && touched[field] ? errors[field] : null}
+        </span>
+    );
+};
 
 const RegisterForm = (props: RegisterFormProps) => {
     return (
         <>
             <div className="topBigSpan">Регистрация</div>
-            <input className="inputField_1" ref={props.emailRef} name="email" type="text"
-                placeholder="Ваш email" />
-            <input className="inputField_2" ref={props.nameRef} name="name" type="text"
-                placeholder="Ваше имя" />
-            <input className="inputField_3" ref={props.passwordRef} name="password" type="password"
-                placeholder="Пароль" />
-            <input className="inputField_4" ref={props.repeatPasswordRef} name="password" type="password"
-                placeholder="Подтверждение пароля" />
+            <Formik
+                initialValues={{ email: '', name: '', password: '', repeatPassword: '' }}
+                validationSchema={props.signUpSchema}
+                onSubmit={(values: signUpValues) => {
+                    values.password === values.repeatPassword &&
+                        props.handleSubmit(values.email, values.name, values.repeatPassword)
+                }}>
+                {(props) => {
+                    const { touched, errors } = props
+                    //TODO: Стилизовать выделение полей при ошибке красным
+                    return (
+                        <Form>
+                            <Field className="inputField_1" name="email" type="text"
+                                placeholder="Ваш email" />
+                            <ErrorMessage classN="errorMessage_inputField_1"
+                                field="email" errors={errors} touched={touched} />
+
+                            <Field className="inputField_2" name="name" type="text"
+                                placeholder="Ваше имя" />
+                            <ErrorMessage classN="errorMessage_inputField_2"
+                                field="name" errors={errors} touched={touched} />
+
+                            <Field className="inputField_3" name="password" type="password"
+                                placeholder="Пароль" />
+                            <ErrorMessage classN="errorMessage_inputField_3"
+                                field="password" errors={errors} touched={touched} />
+
+                            <Field className="inputField_4" name="repeatPassword" type="password"
+                                placeholder="Подтверждение пароля" />
+                            <ErrorMessage classN="errorMessage_inputField_4"
+                                field="repeatPassword" errors={errors} touched={touched} />
+
+                            <button className="signInButton" type="submit">Регистрация</button>
+                        </Form>
+                    )
+                }}
+            </Formik>
             <span className="havePasswordSpan">Уже есть пароль?</span>
-            <span className="signInSpan"
-                onClick={props.handleSignIn}>
-                Войти</span>
-            <button className="signInButton"
-                onClick={props.handleSubmit}>
-                Регистрация</button>
+            <span className="signInSpan" onClick={props.handleSignIn}>Войти</span>
         </>
     )
 }

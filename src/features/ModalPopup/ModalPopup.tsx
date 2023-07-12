@@ -16,6 +16,7 @@ const ModalPopup = () => {
     const shouldFade = useAppSelector((state) => state.modalPopup.shouldFade)
     const errorSelector = useAppSelector((state) => state.mainPage.error)
     const userSelector = useAppSelector((state) => state.mainPage.user)
+    const didRegisterSelector = useAppSelector((state) => state.mainPage.didRegister)
     const dispatch = useAppDispatch()
 
     useEffect(() => {
@@ -34,13 +35,16 @@ const ModalPopup = () => {
 
     useEffect(() => {
         // Show success/error toasts for logging in 
-        if (!!userSelector && userSelector.email && !errorSelector) {
+        if (!!userSelector && userSelector.email && !errorSelector && !didRegisterSelector ) {
             toast.success(`You have successfully logged in as ${userSelector.email}`)
+        }
+        if (!!userSelector && userSelector.email && !errorSelector && didRegisterSelector ) {
+            toast.success(`You have successfully registered as ${userSelector.login}`)
         }
         if (!!errorSelector) {
             toast.warn(`${errorSelector}`)
         }
-    }, [userSelector, errorSelector])
+    }, [userSelector, didRegisterSelector, errorSelector])
 
     const componentRendered = () => {
         switch (windowType) {

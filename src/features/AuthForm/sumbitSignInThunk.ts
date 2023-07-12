@@ -3,14 +3,15 @@ import { setError, setPendingSignIn, setUser } from "../MainPage/MainPageSlice";
 import axios from "axios";
 import { setShouldFade } from "../ModalPopup/ModalPopupSlice";
 
+interface submitSignInProps {
+  email: string;
+  password: string;
+}
 const BASE_URL: string = "https://api.restful-api.dev/objects";
 
 export const submitSignIn = createAsyncThunk(
   "MainPageSlice/submitSignIn",
-  async (
-    { email, password }: { email: string; password: string },
-    thunkAPI
-  ) => {
+  async ({ email, password }: submitSignInProps, thunkAPI) => {
     thunkAPI.dispatch(setPendingSignIn(true));
     try {
       // ЭТО НЕ GOOGLE SIGN IN, ИМЕЙ ВВИДУ

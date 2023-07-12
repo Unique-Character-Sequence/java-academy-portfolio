@@ -19,12 +19,11 @@ const AuthPopup = (props: AuthPopupProps) => {
                 initialValues={{ email: '', password: '' }}
                 validationSchema={props.signInSchema}
                 onSubmit={(values: signInValues) => {
-                    console.log(values)
                     props.handleSubmit(values.email, values.password)
                 }}
             >
                 {(props) => {
-                    const { values, touched, errors } = props
+                    const { touched, errors } = props
                     return (
                         <Form>
                             <Field
