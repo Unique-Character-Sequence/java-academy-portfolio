@@ -1,6 +1,7 @@
 import { Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { signInSchemaType, signInValues } from "./signInSchema";
+import { FieldWithValidation } from "../ModalPopup/FieldWithValidation";
 
 type AuthPopupProps = {
     handleSubmit: (email: string, password: string) => void;
@@ -26,16 +27,11 @@ const AuthPopup = (props: AuthPopupProps) => {
                     const { touched, errors } = props
                     return (
                         <Form>
-                            <Field
-                                className="inputField_1" name="email" type="text" placeholder="Ваш email" />
-                            <span className="errorMessage_inputField_1">
-                                {errors.email && touched.email ? errors.email : ""}
-                            </span>
-                            <Field
-                                className="inputField_2" name="password" type="password" placeholder="Пароль" />
-                            <span className="errorMessage_inputField_2">
-                                {errors.password && touched.password ? errors.password : ""}
-                            </span>
+                            <FieldWithValidation fieldClass="inputField_1" errorClass="errorMessage_inputField_1"
+                                type="text" field="email" errors={errors} touched={touched} placeholder="Ваш email" />
+                            
+                            <FieldWithValidation fieldClass="inputField_2" errorClass="errorMessage_inputField_2"
+                                type="password" field="password" errors={errors} touched={touched} placeholder="Пароль" />
                             <button className="signInButton" type="submit">Войти</button>
                         </Form>
                     )

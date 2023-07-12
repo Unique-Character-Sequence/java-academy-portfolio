@@ -1,20 +1,13 @@
-import { Field, Form, Formik } from "formik";
+import { Form, Formik } from "formik";
 import { signUpSchemaType, signUpValues } from "./signUpSchema";
 import { ObjectSchema } from "yup";
+import { FieldWithValidation } from "../ModalPopup/FieldWithValidation";
 
 interface RegisterFormProps {
     signUpSchema: ObjectSchema<signUpSchemaType>
     handleSubmit: (email: string, name: string, password: string) => void;
     handleSignIn: () => void;
 }
-
-const ErrorMessage = ({ field, classN, errors, touched }: any) => {
-    return (
-        <span className={classN}>
-            {errors[field] && touched[field] ? errors[field] : null}
-        </span>
-    );
-};
 
 const RegisterForm = (props: RegisterFormProps) => {
     return (
@@ -32,25 +25,14 @@ const RegisterForm = (props: RegisterFormProps) => {
                     //TODO: Стилизовать выделение полей при ошибке красным
                     return (
                         <Form>
-                            <Field className="inputField_1" name="email" type="text"
-                                placeholder="Ваш email" />
-                            <ErrorMessage classN="errorMessage_inputField_1"
-                                field="email" errors={errors} touched={touched} />
-
-                            <Field className="inputField_2" name="name" type="text"
-                                placeholder="Ваше имя" />
-                            <ErrorMessage classN="errorMessage_inputField_2"
-                                field="name" errors={errors} touched={touched} />
-
-                            <Field className="inputField_3" name="password" type="password"
-                                placeholder="Пароль" />
-                            <ErrorMessage classN="errorMessage_inputField_3"
-                                field="password" errors={errors} touched={touched} />
-
-                            <Field className="inputField_4" name="repeatPassword" type="password"
-                                placeholder="Подтверждение пароля" />
-                            <ErrorMessage classN="errorMessage_inputField_4"
-                                field="repeatPassword" errors={errors} touched={touched} />
+                            <FieldWithValidation fieldClass="inputField_1" errorClass="errorMessage_inputField_1"
+                                type="text" field="email" errors={errors} touched={touched} placeholder="Ваш email" />
+                            <FieldWithValidation fieldClass="inputField_2" errorClass="errorMessage_inputField_2"
+                                type="text" field="name" errors={errors} touched={touched} placeholder="Ваше имя" />
+                            <FieldWithValidation fieldClass="inputField_3" errorClass="errorMessage_inputField_3"
+                                type="password" field="password" errors={errors} touched={touched} placeholder="Пароль" />
+                            <FieldWithValidation fieldClass="inputField_4" errorClass="errorMessage_inputField_4"
+                                type="password" field="repeatPassword" errors={errors} touched={touched} placeholder="Подтверждение пароля" />
 
                             <button className="signInButton" type="submit">Регистрация</button>
                         </Form>
