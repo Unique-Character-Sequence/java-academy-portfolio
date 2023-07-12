@@ -16,10 +16,9 @@ export const signUpSchema: ObjectSchema<signUpValues> = object({
     .required(REQUIRED_WARNING)
     .min(6, "Минимум 6 символов")
     .max(20),
-  repeatPassword: string().oneOf(
-    [ref("password"), null],
-    "Passwords must match"
-  ),
+  repeatPassword: string()
+    .required(REQUIRED_WARNING)
+    .oneOf([ref("password"), null], "Passwords must match"),
 });
 
 export type signUpSchemaType = InferType<typeof signUpSchema>;
