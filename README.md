@@ -33,6 +33,7 @@ Online Java Academy Project: This is an **actual commercial product** with a Fig
 - ![Redux Toolkit](https://img.shields.io/badge/-Redux_Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white)
 - ![SASS](https://img.shields.io/badge/-SASS-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 - ![Material UI](https://img.shields.io/badge/-Material_UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)
+- ![Formik](https://img.shields.io/badge/-Formik_+_Yup-61DAFB?style=for-the-badge&logo=formik&logoColor=white)
 
 The project is built using popular technologies and frameworks, including **TypeScript**, **React**, **Redux Toolkit**, **SASS**, and **Material UI**. These technologies enable efficient development, powerful **state management**, beautiful UI components and **animations**, flexible **styling** options, and the benefits of **static typing** with TypeScript.
 
