@@ -25,14 +25,14 @@ const RegisterForm = (props: RegisterFormProps) => {
                     //TODO: Стилизовать выделение полей при ошибке красным
                     return (
                         <Form>
-                            <FieldWithValidation fieldClass="inputField_1" errorClass="errorMessage_inputField_1"
-                                type="text" field="email" errors={errors} touched={touched} placeholder="Ваш email" />
-                            <FieldWithValidation fieldClass="inputField_2" errorClass="errorMessage_inputField_2"
-                                type="text" field="name" errors={errors} touched={touched} placeholder="Ваше имя" />
-                            <FieldWithValidation fieldClass="inputField_3" errorClass="errorMessage_inputField_3"
-                                type="password" field="password" errors={errors} touched={touched} placeholder="Пароль" />
-                            <FieldWithValidation fieldClass="inputField_4" errorClass="errorMessage_inputField_4"
-                                type="password" field="repeatPassword" errors={errors} touched={touched} placeholder="Подтверждение пароля" />
+                            <FieldWithValidation fieldClass="inputField_1" type="text" field="email" errors={errors} touched={touched}
+                                placeholder="Ваш email" />
+                            <FieldWithValidation fieldClass="inputField_2" type="text" field="name" errors={errors} touched={touched}
+                                placeholder="Ваше имя" />
+                            <FieldWithValidation fieldClass="inputField_3" type="password" field="password" errors={errors} touched={touched}
+                                placeholder="Пароль" />
+                            <FieldWithValidation fieldClass="inputField_4" type="password" field="repeatPassword" errors={errors} touched={touched}
+                                placeholder="Подтверждение пароля" />
 
                             <button className="signInButton" type="submit">Регистрация</button>
                         </Form>

@@ -48,7 +48,14 @@
     @include inputField ($top: 94.0909vw)
     border-color: $mainRed
 
-  // .inputField_5
-//   @include inputField ($top: 302px)
-//   @media (max-width: 440px)
-//     @include inputField ($top: 68.6364vw)
+.inputField_5
+  @include inputField ($top: 329px)
+  @media (max-width: 440px)
+    @include inputField ($top: 74.7727vw)
+
+.inputField_5_withError
+  @include inputField ($top: 329px)
+  border-color: $mainRed
+  @media (max-width: 440px)
+    @include inputField ($top: 74.7727vw)
+    border-color: $mainRed

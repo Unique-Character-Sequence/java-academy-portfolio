@@ -27,11 +27,10 @@ const AuthPopup = (props: AuthPopupProps) => {
                     const { touched, errors } = props
                     return (
                         <Form>
-                            <FieldWithValidation fieldClass="inputField_1" errorClass="errorMessage_inputField_1"
-                                type="text" field="email" errors={errors} touched={touched} placeholder="Ваш email" />
-                            
-                            <FieldWithValidation fieldClass="inputField_2" errorClass="errorMessage_inputField_2"
-                                type="password" field="password" errors={errors} touched={touched} placeholder="Пароль" />
+                            <FieldWithValidation fieldClass="inputField_1" type="text" field="email" errors={errors} touched={touched} 
+                            placeholder="Ваш email" />
+                            <FieldWithValidation fieldClass="inputField_2" type="password" field="password" errors={errors} touched={touched} 
+                            placeholder="Пароль" />
                             <button className="signInButton" type="submit">Войти</button>
                         </Form>
                     )

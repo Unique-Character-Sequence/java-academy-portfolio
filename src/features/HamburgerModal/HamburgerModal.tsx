@@ -7,6 +7,7 @@ type HamburgerModalProps = {
   shouldFade: boolean;
   handleClick_hamburger: () => void;
   handleClick_signIn: () => void;
+  handleClick_signUp: () => void;
 };
 
 export const HamburgerModal = (props:HamburgerModalProps) => {
@@ -21,7 +22,7 @@ export const HamburgerModal = (props:HamburgerModalProps) => {
         <span className="text3">Отзывы</span>
         <span className="text4">Ценовая политика</span>
         <button onClick={props.handleClick_signIn} className="buttonLogin">Вход</button>
-        <button className="buttonRegister">Регистрация</button>
+        <button onClick={props.handleClick_signUp} className="buttonRegister">Регистрация</button>
       </div>
     </div>
     </Fade>

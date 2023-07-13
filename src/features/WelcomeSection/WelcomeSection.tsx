@@ -36,6 +36,7 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
       <ToastContainer />
       <HamburgerModal shouldFade={props.clicked_hamburger}
         handleClick_signIn={props.handleClick_signIn}
+        handleClick_signUp={props.handleClick_signUp}
         handleClick_hamburger={props.handleClick_hamburger} />
       <div className="rectangle41TextBox">
         <span className="textBig1">Становись</span>

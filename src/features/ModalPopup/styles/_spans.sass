@@ -29,6 +29,26 @@
     top: 42.9545vw
     font-size: 5.4545vw
 
+.rememberPasswordSmallSpan
+  position: absolute
+  width: 221px
+  height: 30px
+  top: 264px
+  left: 110px
+  font-size: 12px
+  font-weight: 400
+  line-height: 15px
+  letter-spacing: 0em
+  text-align: center
+  color: $mainBlue
+  @media (max-width: 440px)
+    width: 50.2273vw
+    height: 6.8182vw
+    top: 60.0000vw
+    left: 25.0000vw
+    font-size: 2.7273vw
+    line-height: 3.4091vw
+
 .testCredentialsSpan1
   @include testCredentialsSpan(435px)
   @media (max-width: 440px)
@@ -54,3 +74,8 @@
   @include errorMessage_inputField(450px)
   @media (max-width: 440px)
     @include errorMessage_inputField(102.2727vw)
+
+.errorMessage_inputField_5
+  @include errorMessage_inputField(365px)
+  @media (max-width: 440px)
+    @include errorMessage_inputField(82.9545vw)
