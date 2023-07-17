@@ -37,18 +37,18 @@ const ModalPopup = () => {
 
     useEffect(() => {
         // Show success/error toasts for logging in 
-        if (!!userSelector && userSelector.email && !errorSelector && !didRegisterSelector ) {
-            toast.success(`You have successfully logged in as ${userSelector.email}`)
+        if (!!userSelector && userSelector.email && !errorSelector) {
+            if (!didRegisterSelector) {
+                toast.success(`You have successfully logged in as ${userSelector.email}`);
+            } else {
+                toast.success(`You have successfully registered as ${userSelector.login}`);
+            }
+        } else if (!!didRequestPasswordRecovery && !errorSelector) {
+            toast.success(`You have sent a recovery request as ${didRequestPasswordRecovery}`);
+        } else if (!!errorSelector) {
+            toast.warn(`${errorSelector}`);
         }
-        if (!errorSelector && !!didRequestPasswordRecovery ) {
-            toast.success(`You have sent recovery request as ${didRequestPasswordRecovery}`)
-        }
-        if (!!userSelector && userSelector.email && !errorSelector && didRegisterSelector ) {
-            toast.success(`You have successfully registered as ${userSelector.login}`)
-        }
-        if (!!errorSelector) {
-            toast.warn(`${errorSelector}`)
-        }
+        
     }, [userSelector, didRequestPasswordRecovery, didRegisterSelector, errorSelector])
 
     const componentRendered = () => {
