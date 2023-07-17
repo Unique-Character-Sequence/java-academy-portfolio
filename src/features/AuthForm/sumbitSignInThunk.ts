@@ -20,7 +20,13 @@ export const submitSignIn = createAsyncThunk(
       });
       if (response.status === 200) {
         thunkAPI.dispatch(
-          setUser({ email, login: email, picture_url: null, loggedIn: true })
+          setUser({
+            email,
+            login: email.split("@")[0],
+            name: null,
+            picture_url: null,
+            loggedIn: true,
+          })
         );
         thunkAPI.dispatch(setShouldFade(false));
         thunkAPI.dispatch(setError(null));

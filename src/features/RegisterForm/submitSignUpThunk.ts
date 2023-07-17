@@ -24,7 +24,8 @@ export const submitSignUpThunk = createAsyncThunk(
         thunkAPI.dispatch(
           setUser({
             email: email,
-            login: name,
+            login: email.split("@")[0],
+            name: name,
             picture_url: null,
             loggedIn: true,
           })

@@ -28,7 +28,12 @@ const App = () => {
             // Google Auth dispatched to redux
             console.log("Encoded JWT ID token: " + response.credential)
             var userObject: any = jwt_decode(response.credential)
-            dispatch(setUser({ email: userObject.email, login: userObject.name, picture_url: userObject.picture, loggedIn: true }))
+            dispatch(setUser({
+                email: userObject.email,
+                login: userObject.email.split("@")[0],
+                name: userObject.name,
+                picture_url: userObject.picture, loggedIn: true
+            }))
             dispatch(setError(null))
         }
         google.accounts.id.initialize({

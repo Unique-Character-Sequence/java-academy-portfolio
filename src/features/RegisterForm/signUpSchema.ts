@@ -10,7 +10,7 @@ export interface signUpValues {
 const REQUIRED_WARNING = "Обязательное поле";
 
 export const signUpSchema: ObjectSchema<signUpValues> = object({
-  email: string().email().required(REQUIRED_WARNING),
+  email: string().email("Некорректный ввод email").required(REQUIRED_WARNING),
   name: string().required(REQUIRED_WARNING),
   password: string()
     .required(REQUIRED_WARNING)

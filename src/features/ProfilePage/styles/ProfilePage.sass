@@ -1,0 +1,58 @@
+@import vars
+@import "../../ModalPopup/styles/mixins"
+
+.mainDiv_profile
+    font-family: $mainFontFamily
+
+.header_profile
+    display: flex
+    justify-content: space-between
+    width: 100vw
+    height: 79px
+    background: $mainBlue
+    @media (max-width: 320px)
+        height: 50px
+    .logoLoggedIn_profile
+        position: relative
+        width: 235px
+        height: 49px
+        top: 15px
+        left: 20px
+        @media (max-width: 320px)
+            display: none
+    .headerRightSection_profile
+        position: relative
+        top: 12px
+        right: 20px
+
+    .pfp_header_profile
+        border-radius: 55px
+        width: 55px
+        height: 55px
+        @media (max-width: 320px)
+            height: 35px
+            width: 35px
+
+.span_big_profile
+    position: absolute
+    top: 186px
+    left: 120px
+
+    color: #000
+    font-size: 24px
+    font-style: normal
+    font-weight: 600
+    line-height: normal
+    letter-spacing: -0.48px
+
+.divCenterContent_profile
+    display: flex
+    justify-content: center
+    width: 100vw
+
+    .redButton_profile
+        @include redButton($top: 751px)
+        left: 400px
+
+    .inputField1_profile
+        @include inputField($top: 508px)

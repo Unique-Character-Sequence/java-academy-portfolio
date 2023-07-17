@@ -53,3 +53,38 @@
     right: 21.5909vw
     font-size: 2.5000vw
     line-height: 2.9545vw
+
+@mixin redButton ($top)
+  position: absolute
+  top: $top
+  left: 95px
+  color: $mainWhite
+  display: flex
+  width: 250px
+  height: 48px
+  padding: 10px 20px
+  justify-content: center
+  align-items: center
+  border-radius: 5px
+  border: none
+  gap: 10px
+  cursor: pointer
+  background: $mainRed
+  font-family: Inter
+  font-size: 14px
+  font-weight: 600
+  line-height: 17px
+  letter-spacing: 0em
+  &:hover
+    background: #DA3739
+    transition: 0.15s
+
+  @media (max-width: 440px)
+    left: 21.5909vw
+    width: 56.8182vw
+    height: 10.9091vw
+    padding: 2.2727vw 4.5455vw
+    border-radius: 1.1364vw
+    gap: 2.2727vw
+    font-size: 3.1818vw
+    line-height: 3.8636vw

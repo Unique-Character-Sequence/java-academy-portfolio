@@ -4,6 +4,7 @@ type strOrNull = string | null;
 
 interface UserInterface {
   login: string;
+  name: string;
   email: string;
   picture_url: string;
 }
@@ -38,7 +39,16 @@ export const MainPageSlice = createSlice({
   reducers: {
     setUser: (state, action: PayloadAction<UserInterfaceAction>) => {
       state.loggedIn = action.payload.loggedIn;
-      state.user = action.payload;
+      state.user = {
+        email: action.payload.email,
+        name: action.payload.name,
+        login: action.payload.login,
+        picture_url: action.payload.picture_url,
+      };
+    },
+    setLogOut: (state) => {
+      state.loggedIn = false
+      state.user = null
     },
     setError: (state, action: PayloadAction<strOrNull>) => {
       state.error = action.payload;
@@ -52,7 +62,10 @@ export const MainPageSlice = createSlice({
     setUserDidRegister: (state, action: PayloadAction<boolean>) => {
       state.didRegister = action.payload;
     },
-    setDidRequestPasswordRecovery: (state, action: PayloadAction<strOrNull>) => {
+    setDidRequestPasswordRecovery: (
+      state,
+      action: PayloadAction<strOrNull>
+    ) => {
       state.didRequestPasswordRecovery = action.payload;
     },
   },
@@ -60,6 +73,7 @@ export const MainPageSlice = createSlice({
 
 export const {
   setUser,
+  setLogOut,
   setError,
   setPendingSignIn,
   setPendingSignUp,
