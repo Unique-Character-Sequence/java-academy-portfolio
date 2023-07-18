@@ -15,10 +15,6 @@ const ModalPopup = () => {
     // Redux variables
     const windowType = useAppSelector((state) => state.modalPopup.windowType)
     const shouldFade = useAppSelector((state) => state.modalPopup.shouldFade)
-    const errorSelector = useAppSelector((state) => state.mainPage.error)
-    const userSelector = useAppSelector((state) => state.mainPage.user)
-    const didRegisterSelector = useAppSelector((state) => state.mainPage.didRegister)
-    const didRequestPasswordRecovery = useAppSelector((state) => state.mainPage.didRequestPasswordRecovery)
     const dispatch = useAppDispatch()
 
     useEffect(() => {
@@ -35,21 +31,7 @@ const ModalPopup = () => {
         };
     }, [dispatch, shouldFade])
 
-    useEffect(() => {
-        // Show success/error toasts for logging in 
-        if (!!userSelector && userSelector.email && !errorSelector) {
-            if (!didRegisterSelector) {
-                toast.success(`You have successfully logged in as ${userSelector.email}`);
-            } else {
-                toast.success(`You have successfully registered as ${userSelector.login}`);
-            }
-        } else if (!!didRequestPasswordRecovery && !errorSelector) {
-            toast.success(`You have sent a recovery request as ${didRequestPasswordRecovery}`);
-        } else if (!!errorSelector) {
-            toast.warn(`${errorSelector}`);
-        }
-        
-    }, [userSelector, didRequestPasswordRecovery, didRegisterSelector, errorSelector])
+    
 
     const componentRendered = () => {
         switch (windowType) {

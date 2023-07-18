@@ -22,8 +22,16 @@
     //     border-radius: 1.1364vw
 
 .mainDiv_profile
+    position: relative
     font-family: $mainFontFamily
     height: 100vh
+    min-height: 1080px
+
+    @media (max-width: 768px)
+        min-height: 961px
+
+    @media (max-width: 320px)
+        min-height: 799px
 
 .header_profile
     position: sticky
@@ -77,6 +85,9 @@
     left: 128px
     @media (max-width: 768px)
         left: 20px
+    @media (max-width: 320px)
+        top: 65px
+        left: 10px
 
 .span_big_profile
     position: absolute
@@ -92,6 +103,10 @@
     @media (max-width: 768px)
         top: 148px
         left: 20px
+    @media (max-width: 320px)
+        top: 108px
+        left: 20px
+        font-size: 18px
 
 .centerDiv_profile
     display: flex
@@ -101,6 +116,8 @@
     top: 277px
     @media (max-width: 768px)
         top: 237px
+    @media (max-width: 320px)
+        top: 162px
 
     .pfp_content_profile
         border-radius: 157px
@@ -159,3 +176,36 @@
     width: 100vw
     height: 57px
     background-color: $mainBlue
+
+
+
+.copyright_span_profile
+    position: absolute
+    color: #FFF
+    text-align: center
+    font-size: 12px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    top: 21px
+    left: 119px
+    @media (max-width: 768px)
+        left: 20px
+
+.support_span_profile
+    position: absolute
+    color: #FFF
+    text-align: center
+    font-family: Inter
+    font-size: 12px
+    font-style: normal
+    font-weight: 400
+    line-height: normal
+    top: 21px
+    left: 319px
+    letter-spacing: 0em
+    text-align: center
+    @media (max-width: 768px)
+        left: 134px
+    @media (max-width: 320px)
+        left: 160px

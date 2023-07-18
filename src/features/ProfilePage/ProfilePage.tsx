@@ -6,8 +6,9 @@ import toTheMainPage from "../../assets/Group 13.png"
 import { persistor } from "../../app/store"
 import { setLogOut } from "../MainPage/MainPageSlice"
 import { FieldWithValidation } from '../ModalPopup/FieldWithValidation';
-import { Form, Formik } from "formik"
+import { Formik } from "formik"
 import logo_mobile from "../../assets/logo_profile_header.svg"
+
 
 
 const ProfilePage = () => {
@@ -61,8 +62,11 @@ const ProfilePage = () => {
 
                 <button className="redButton_profile" onClick={handleLogOut}>Выйти</button>
             </div>
-            
-            <div className="footer_profile"/>
+
+            <div className="footer_profile">
+                <span className="copyright_span_profile">Копирайт</span>
+                <span className="support_span_profile">поддержка?</span>
+            </div>
         </div>
     )
 }

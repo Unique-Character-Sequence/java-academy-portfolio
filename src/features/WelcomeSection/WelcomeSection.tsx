@@ -33,7 +33,6 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
         alt="hamburgerButton"
       />
       <ModalPopup />
-      <ToastContainer />
       <HamburgerModal shouldFade={props.clicked_hamburger}
         handleClick_signIn={props.handleClick_signIn}
         handleClick_signUp={props.handleClick_signUp}
