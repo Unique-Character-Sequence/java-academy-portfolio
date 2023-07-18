@@ -18,7 +18,7 @@ export const signUpSchema: ObjectSchema<signUpValues> = object({
     .max(20),
   repeatPassword: string()
     .required(REQUIRED_WARNING)
-    .oneOf([ref("password"), null], "Passwords must match"),
+    .oneOf([ref("password"), null], "Пароли не совпадают"),
 });
 
 export type signUpSchemaType = InferType<typeof signUpSchema>;
