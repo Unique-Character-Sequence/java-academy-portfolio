@@ -24,7 +24,7 @@
 
 ![Screen Shot](https://i.imgur.com/jvtMKS0.png)
 
-Online Java Academy Project: This is an **actual commercial product** with a Figma design that was found on a freelancing resource. Multiple features will be added soon.
+Online Java Academy Project: This is an **actual commercial product** with a Figma design that was found on a freelancing resource.
 
 ## Built With
 
@@ -36,11 +36,35 @@ Online Java Academy Project: This is an **actual commercial product** with a Fig
 - ![Formik](https://img.shields.io/badge/-Formik_+_Yup-61DAFB?style=for-the-badge&logo=formik&logoColor=white) to handle validation
 - ![Redux-persist](https://img.shields.io/badge/-redux_persist-61DAFB?style=for-the-badge&logo=formik&logoColor=white) to handle localstorage 
 
-The project is built using popular technologies and frameworks, including **TypeScript**, **React**, **Redux Toolkit**, **SASS**, and **Material UI**. These technologies enable efficient development, powerful **state management**, beautiful UI components and **animations**, flexible **styling** options, and the benefits of **static typing** with TypeScript.
 
-The app is designed to be **fully responsive**, providing a seamless experience across various devices and screen sizes, including phones, tablets, laptops, and desktops. The responsive design ensures that users can access and interact with the app comfortably **on any device**, optimizing usability.
+**Project Overview:**
 
-The **clean and functional codebase** is a result of translating the Figma UI document into a fully working web application. The **attention to detail** and commitment to delivering a high-quality product are evident in the implementation.
+
+- **TypeScript and Redux Toolkit:** The project is developed using **TypeScript** and leverages the benefits of **Redux Toolkit** for efficient state management and enhanced development experience.
+  
+- **Sass**: This project is a **fully responsive** web application developed using **Sass modern syntax** to ensure optimal viewing across different devices. It features various components and functionalities:
+
+- **Material UI**: For **animations** of fading for modal window
+  
+- **Google Authentication:** Users can sign in using their Google accounts, adding convenience and security to the authentication process.
+
+- **Redux and Redux Persist:** The application utilizes **Redux** and **Redux Persist** to maintain user login state across sessions, ensuring a seamless experience for returning users.
+
+- **Async Thunks and Server Requests:** Asynchronous thunks are implemented to handle server requests, allowing efficient communication between the client-side and server-side.
+
+- **API Requests with Axios:** The application integrates with APIs by utilizing the **Axios** library for sending HTTP requests, ensuring smooth communication between the client and server.
+
+- **Form Validation with Formik and Yup:** **Formik** and **Yup** libraries are used for form validation, ensuring data integrity and providing a user-friendly form submission experience.
+
+- **Toasts for User Feedback:** The application incorporates toasts to provide visual feedback for successful API requests or error messages, enhancing the user experience.
+
+- **Profile Page:** The profile page displays essential user information such as the profile photo, name, username, and email. However, users cannot modify this information, providing a read-only view.
+
+- **Modal Popup Windows:** The **RegisterForm**, **ForgotPasswordForm**, and **AuthForm** are all part of modal popup windows, offering a streamlined user experience with easy navigation between forms.
+
+- The **clean and functional codebase** is a result of translating the Figma UI document into a fully working web application. The **attention to detail** and commitment to delivering a high-quality product are evident in the implementation.
+
+Overall, this project delivers a responsive and user-centric web application with seamless authentication, data persistence, and efficient server communication.
 
 Feel free to explore the project and see how these technologies come together to create a seamless and visually appealing user experience.
 
