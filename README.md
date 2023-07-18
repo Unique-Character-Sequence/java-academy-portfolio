@@ -24,7 +24,7 @@
 
 ![Screen Shot](https://i.imgur.com/jvtMKS0.png)
 
-Online Java Academy Project: This is an **actual commercial product** with a Figma design that was found on a freelancing resource. Multiple features will be added soon.
+Online Java Academy Project: This is an **actual commercial product** with a Figma design that was found on a freelancing resource.
 
 ## Built With
 
