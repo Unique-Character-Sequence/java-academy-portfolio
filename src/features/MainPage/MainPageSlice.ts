@@ -21,6 +21,7 @@ export interface MainPageState {
   didRequestPasswordRecovery: strOrNull;
   user: UserInterface | null;
   error: strOrNull;
+  notificationsNumber: number;
 }
 
 const initialState: MainPageState = {
@@ -31,6 +32,7 @@ const initialState: MainPageState = {
   didRequestPasswordRecovery: null,
   user: null,
   error: null,
+  notificationsNumber: 1
 };
 
 export const MainPageSlice = createSlice({
@@ -68,6 +70,9 @@ export const MainPageSlice = createSlice({
     ) => {
       state.didRequestPasswordRecovery = action.payload;
     },
+    setNotificationsNum: (state) => {
+      state.notificationsNumber++
+    },
   },
 });
 
@@ -79,6 +84,7 @@ export const {
   setPendingSignUp,
   setUserDidRegister,
   setDidRequestPasswordRecovery,
+  setNotificationsNum
 } = MainPageSlice.actions;
 
 export default MainPageSlice.reducer;

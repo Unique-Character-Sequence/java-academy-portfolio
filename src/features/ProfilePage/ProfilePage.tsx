@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import defaultPic from "../../assets/default_pfp.jpg"
 import toTheMainPage from "../../assets/Group 13.png"
 import { persistor } from "../../app/store"
-import { setLogOut } from "../MainPage/MainPageSlice"
+import { setLogOut, setNotificationsNum } from "../MainPage/MainPageSlice"
 import { FieldWithValidation } from '../ModalPopup/FieldWithValidation';
 import { Formik } from "formik"
 import logo_mobile from "../../assets/logo_profile_header.svg"
@@ -13,10 +13,11 @@ import logo_mobile from "../../assets/logo_profile_header.svg"
 
 const ProfilePage = () => {
     const user = useAppSelector((state) => state.mainPage.user)
+    const notificationsNumber = useAppSelector((state) => state.mainPage.notificationsNumber)
     const dispatch = useAppDispatch()
 
+    const handleNotificIncrement = () => dispatch(setNotificationsNum())
     const handleLogOut = async () => {
-
         persistor.pause();
         await persistor.flush()
         await persistor.purge()
@@ -29,8 +30,11 @@ const ProfilePage = () => {
                 <img className="logo_header_profile_mobile" src={logo_mobile} alt="" />
                 <img className="logo_header_profile" src={logo} alt="Logo" />
                 <div className="headerRightSection_profile">
-                    {/* Корзина Уведомления Пикча */}
+                    <div onClick={handleNotificIncrement}>
+                        <span className="notific_profile">Уведомления</span>
+                        {notificationsNumber > 0 && (<div className="redNumber_notific">{notificationsNumber}</div>)}
 
+                    </div>
                     <img className="pfp_header_profile" src={user.picture_url || defaultPic} alt="UserPfp" />
                 </div>
             </div>
