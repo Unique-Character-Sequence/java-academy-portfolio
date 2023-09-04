@@ -51,6 +51,7 @@ export const MainPageSlice = createSlice({
     setLogOut: (state) => {
       state.loggedIn = false
       state.user = null
+      state.notificationsNumber = 1
     },
     setError: (state, action: PayloadAction<strOrNull>) => {
       state.error = action.payload;

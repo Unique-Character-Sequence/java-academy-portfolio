@@ -106,14 +106,19 @@
     -ms-user-select: none // IE 10 and IE 11
     user-select: none // Standard syntax
     background-color: $mainRed
+    @media (max-width: 320px)
+        display: none
 
 .pfp_header_profile
     border-radius: 55px
     width: 55px
     height: 55px
     @media (max-width: 320px)
+        position: relative
         height: 35px
         width: 35px
+        left: 7px
+        bottom: 5px
 
 .toTheMainPage_profile
     position: absolute
