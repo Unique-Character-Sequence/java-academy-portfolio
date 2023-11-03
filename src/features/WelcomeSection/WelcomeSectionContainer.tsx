@@ -1,10 +1,12 @@
 import { useState } from "react";
 import WelcomeSection from "./WelcomeSection";
-import { useAppDispatch } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { setShouldFade, setWindowType } from "../ModalPopup/ModalPopupSlice";
+import { setPage } from "../MainPage/MainPageSlice";
 
 const WelcomeSectionContainer = () => {
     const dispatch = useAppDispatch()
+    const isLoggedIn = useAppSelector((state) => state.mainPage.loggedIn)
 
     const [clicked_hamburger, setClicked_hamburger] = useState<boolean>(false);
     const handleClick_hamburger = (): void => {
@@ -21,12 +23,18 @@ const WelcomeSectionContainer = () => {
         dispatch(setWindowType("SignUp"))
     }
 
+    const handleClick_profilePage = (): void => {
+        dispatch(setPage("ProfilePage"))
+    };
+
     return (
         <WelcomeSection
+            isLoggedIn={isLoggedIn}
             clicked_hamburger={clicked_hamburger}
             handleClick_hamburger={handleClick_hamburger}
             handleClick_signIn={handleClick_signIn}
             handleClick_signUp={handleClick_signUp}
+            handleClick_profilePage={handleClick_profilePage}
         />
     )
 }

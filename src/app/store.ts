@@ -22,6 +22,7 @@ import {
 const persistConfig = {
   key: "root",
   storage,
+  // blacklist: ["mainPage"]
 };
 
 const rootReducer = combineReducers({

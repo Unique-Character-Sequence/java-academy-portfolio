@@ -5,15 +5,16 @@ import logoRetina from "../../assets/logo-txt_desktop@2x.png";
 import group4 from "../../assets/Group 4.png";
 import group5 from "../../assets/Group 5.png";
 import { HamburgerModal } from '../HamburgerModal/HamburgerModal';
-import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import ModalPopup from "../ModalPopup/ModalPopup";
 
 type WelcomeSectionProps = {
   clicked_hamburger: boolean
+  isLoggedIn: boolean
   handleClick_hamburger: () => void
   handleClick_signIn: () => void
   handleClick_signUp: () => void
+  handleClick_profilePage: () => void
 }
 
 const WelcomeSection = (props: WelcomeSectionProps) => {
@@ -76,14 +77,24 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
         <div className="ellipse5" />
         <div className="ellipse4" />
       </div>
-      <div className="auth_ButtonsContainer">
-        <button onClick={props.handleClick_signIn} className="auth_Button1">
-          <span>Вход</span>
-        </button>
-        <button onClick={props.handleClick_signUp} className="auth_Button2">
-          <span>Регистрация</span>
-        </button>
-      </div>
+      {
+        props.isLoggedIn === false
+          ?
+          <div className="auth_ButtonsContainer">
+            <button onClick={props.handleClick_signIn} className="auth_Button1">
+              <span>Вход</span>
+            </button>
+            <button onClick={props.handleClick_signUp} className="auth_Button2">
+              <span>Регистрация</span>
+            </button>
+          </div>
+          :
+          <div className="profile_ButtonsContainer">
+            <button onClick={props.handleClick_profilePage} className="auth_Button3">
+              <span>Мой профиль</span>
+            </button>
+          </div>
+      }
     </div>
   );
 };

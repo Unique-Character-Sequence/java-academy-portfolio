@@ -116,8 +116,35 @@
       font-size: 2.0833vw
       line-height: 2.4740vw
 
+.profile_ButtonsContainer
+  display: flex
+  justify-content: space-between
+  @include media(">1400px")
+    position: absolute
+    top: 97px
+    right: 65px
+    transition: 0.2s
+  @include media(">tablet", "<=1400px")
+    position: absolute
+    top: 6.9286vw
+    left: 77.65vw
+    margin-left: auto
+    margin-right: auto
+  @include media(">phone", "<=tablet")
+    position: absolute
+    top: 9.8958vw
+    left: 69.2vw
+    margin-left: auto
+    margin-right: auto
+  @include media("<=phone")
+    display: none
+
+  .auth_Button3
+    @include auth_Button
+
 .auth_ButtonsContainer
   display: flex
+  justify-content: space-between
   @include media(">1400px")
     position: absolute
     top: 97px
@@ -140,12 +167,6 @@
 
   .auth_Button1
     @include auth_Button
-    @include media(">1400px")
-      margin-left: auto
-    @include media(">tablet", "<=1400px")
-      margin-left: auto
-    @include media(">phone", "<=tablet")
-      margin-left: auto
 
   .auth_Button2
     @include auth_Button

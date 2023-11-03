@@ -22,6 +22,7 @@ export interface MainPageState {
   user: UserInterface | null;
   error: strOrNull;
   notificationsNumber: number;
+  currentPage: "MainPage" | "ProfilePage";
 }
 
 const initialState: MainPageState = {
@@ -32,7 +33,8 @@ const initialState: MainPageState = {
   didRequestPasswordRecovery: null,
   user: null,
   error: null,
-  notificationsNumber: 1
+  notificationsNumber: 3,
+  currentPage: "MainPage",
 };
 
 export const MainPageSlice = createSlice({
@@ -47,11 +49,12 @@ export const MainPageSlice = createSlice({
         login: action.payload.login,
         picture_url: action.payload.picture_url,
       };
+      state.currentPage = "ProfilePage";
     },
     setLogOut: (state) => {
-      state.loggedIn = false
-      state.user = null
-      state.notificationsNumber = 1
+      state.currentPage = "MainPage";
+      state.loggedIn = false;
+      state.user = null;
     },
     setError: (state, action: PayloadAction<strOrNull>) => {
       state.error = action.payload;
@@ -72,7 +75,13 @@ export const MainPageSlice = createSlice({
       state.didRequestPasswordRecovery = action.payload;
     },
     setNotificationsNum: (state) => {
-      state.notificationsNumber++
+      state.notificationsNumber = 0;
+    },
+    setPage: (
+      state,
+      action: PayloadAction<typeof initialState.currentPage>
+    ) => {
+      state.currentPage = action.payload;
     },
   },
 });
@@ -85,7 +94,8 @@ export const {
   setPendingSignUp,
   setUserDidRegister,
   setDidRequestPasswordRecovery,
-  setNotificationsNum
+  setNotificationsNum,
+  setPage,
 } = MainPageSlice.actions;
 
 export default MainPageSlice.reducer;

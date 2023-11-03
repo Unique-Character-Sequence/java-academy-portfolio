@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import defaultPic from "../../assets/default_pfp.jpg"
 import toTheMainPage from "../../assets/Group 13.png"
 import { persistor } from "../../app/store"
-import { setLogOut, setNotificationsNum } from "../MainPage/MainPageSlice"
+import { setLogOut, setNotificationsNum, setPage } from "../MainPage/MainPageSlice"
 import { FieldWithValidation } from '../ModalPopup/FieldWithValidation';
 import { Formik } from "formik"
 import logo_mobile from "../../assets/logo_profile_header.svg"
@@ -15,6 +15,10 @@ const ProfilePage = () => {
     const user = useAppSelector((state) => state.mainPage.user)
     const notificationsNumber = useAppSelector((state) => state.mainPage.notificationsNumber)
     const dispatch = useAppDispatch()
+
+    const handleClick_mainPage = (): void => {
+        dispatch(setPage("MainPage"))
+    };
 
     const handleNotificIncrement = () => dispatch(setNotificationsNum())
     const handleLogOut = async () => {
@@ -27,19 +31,18 @@ const ProfilePage = () => {
     return (
         <div className="mainDiv_profile">
             <div className="header_profile">
-                <img className="logo_header_profile_mobile" src={logo_mobile} alt="" />
-                <img className="logo_header_profile" src={logo} alt="Logo" />
+                <img className="logo_header_profile_mobile" onClick={handleClick_mainPage} src={logo_mobile} alt="" />
+                <img className="logo_header_profile" onClick={handleClick_mainPage} src={logo} alt="Logo" />
                 <div className="headerRightSection_profile">
                     <div onClick={handleNotificIncrement}>
                         <span className="notific_profile">Уведомления</span>
                         {notificationsNumber > 0 && (<div className="redNumber_notific">{notificationsNumber}</div>)}
-
                     </div>
                     <img className="pfp_header_profile" src={user.picture_url || defaultPic} alt="UserPfp" />
                 </div>
             </div>
             <div className="span_big_profile">Профиль</div>
-            <img className="toTheMainPage_profile" src={toTheMainPage} alt="" />
+            <img className="toTheMainPage_profile" onClick={handleClick_mainPage} src={toTheMainPage} alt="" />
 
             <div className="centerDiv_profile">
                 <img className="pfp_content_profile" src={user.picture_url || defaultPic} alt="UserPfp" />
