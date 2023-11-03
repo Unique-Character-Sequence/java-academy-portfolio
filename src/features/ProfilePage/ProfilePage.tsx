@@ -23,16 +23,19 @@ const ProfilePage = () => {
 
     const handleNotificIncrement = () => {
         notificationsNumber && setTimeout(() => {
-            dispatch(setNotificationsNum())
+            dispatch(setNotificationsNum(0))
 
-            toast("Get free month of subscription!");
+            toast("Get free month of subscription!", { autoClose: 1000 });
             setTimeout(() => {
-                toast("We have updated our ToS.");
+                toast("We have updated our ToS.", { autoClose: 1000 });
                 setTimeout(() => {
-                    toast("Winter sale!");
-                }, 400);
-            }, 400);
-        }, 400);
+                    toast("Winter sale!", { autoClose: 1000 });
+                    setTimeout(() => {
+                        dispatch(setNotificationsNum(3))
+                    }, 2800);
+                }, 300);
+            }, 300);
+        }, 300);
     }
     const handleLogOut = async () => {
         persistor.pause();

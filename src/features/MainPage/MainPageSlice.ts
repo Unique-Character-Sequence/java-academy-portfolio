@@ -74,8 +74,8 @@ export const MainPageSlice = createSlice({
     ) => {
       state.didRequestPasswordRecovery = action.payload;
     },
-    setNotificationsNum: (state) => {
-      state.notificationsNumber = 0;
+    setNotificationsNum: (state, action: PayloadAction<number>) => {
+      state.notificationsNumber = action.payload;
     },
     setPage: (
       state,
