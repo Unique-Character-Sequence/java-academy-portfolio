@@ -8,6 +8,7 @@ import { setLogOut, setNotificationsNum, setPage } from "../MainPage/MainPageSli
 import { FieldWithValidation } from '../ModalPopup/FieldWithValidation';
 import { Formik } from "formik"
 import logo_mobile from "../../assets/logo_profile_header.svg"
+import { toast } from "react-toastify"
 
 
 
@@ -20,7 +21,19 @@ const ProfilePage = () => {
         dispatch(setPage("MainPage"))
     };
 
-    const handleNotificIncrement = () => dispatch(setNotificationsNum())
+    const handleNotificIncrement = () => {
+        notificationsNumber && setTimeout(() => {
+            dispatch(setNotificationsNum())
+
+            toast("Get free month of subscription!");
+            setTimeout(() => {
+                toast("We have updated our ToS.");
+                setTimeout(() => {
+                    toast("Winter sale!");
+                }, 400);
+            }, 400);
+        }, 400);
+    }
     const handleLogOut = async () => {
         persistor.pause();
         await persistor.flush()

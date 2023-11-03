@@ -34,9 +34,12 @@ const WelcomeSection = (props: WelcomeSectionProps) => {
         alt="hamburgerButton"
       />
       <ModalPopup />
-      <HamburgerModal shouldFade={props.clicked_hamburger}
+      <HamburgerModal
+        shouldFade={props.clicked_hamburger}
+        isLoggedIn={props.isLoggedIn}
         handleClick_signIn={props.handleClick_signIn}
         handleClick_signUp={props.handleClick_signUp}
+        handleClick_profilePage={props.handleClick_profilePage}
         handleClick_hamburger={props.handleClick_hamburger} />
       <div className="rectangle41TextBox">
         <span className="textBig1">Становись</span>
